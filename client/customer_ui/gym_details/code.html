@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Gym Details - Openkora</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#D4E938",
+                        "background-dark": "#000000",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .active-ring {
+            box-shadow: 0 0 0 2px #D4E938;
+        }.no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+            background-color: #000000;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-dark font-display text-white">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden pb-24">
+<div class="flex items-center bg-black/80 backdrop-blur-md sticky top-0 z-50 p-4 justify-between">
+<button class="text-white flex size-10 shrink-0 items-center justify-center rounded-full bg-white/10" data-icon="ArrowLeft">
+<span class="material-symbols-outlined">arrow_back_ios_new</span>
+</button>
+<h2 class="text-white text-lg font-bold leading-tight tracking-tight flex-1 text-center">Gym Details</h2>
+<div class="flex w-10 items-center justify-end">
+<button class="flex size-10 items-center justify-center rounded-full bg-white/10 text-white">
+<span class="material-symbols-outlined" data-icon="Share">share</span>
+</button>
+</div>
+</div>
+<div class="flex overflow-x-auto no-scrollbar snap-x snap-mandatory">
+<div class="flex items-stretch p-4 gap-4">
+<div class="snap-center flex h-full flex-1 flex-col gap-3 rounded-xl min-w-[320px]">
+<div class="w-full bg-center bg-no-repeat aspect-[16/10] bg-cover rounded-2xl border border-white/10" data-alt="Wide shot of modern gym main hall with cardio machines" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBvSIUQvd0fsxzK_9kvJpMF9sTQv4X3lBee25sbbxJf6O4NL0B4j94DOiKhboTLeJsM9pdwbxhkwQ31iZaadiYzviDLC3mfZxPave104dUiCEdHk5DugUnyGTUM9kJgZdaTNQNqimxt1cuBSdbVod2kpmY6JNeSp-Nkzkd76ky7plJmhWcyfW2x5b-IqPBxmRat3dT4uD0OAVE4flGP0gGUaEAxCBjR_r6u_ZyrKWEaYMSZCRlwpT8Ke_YRK2ey3TvkYTLkzPOnU8lm");'>
+</div>
+</div>
+<div class="snap-center flex h-full flex-1 flex-col gap-3 rounded-xl min-w-[320px]">
+<div class="w-full bg-center bg-no-repeat aspect-[16/10] bg-cover rounded-2xl border border-white/10" data-alt="Heavy lifting zone with squat racks and iron weights" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDr81s6uDRW4nm8c1YN7k5yghCusTTAgE9f7pUUgWR3jf9aPAou3lrsAmEf0JVJtiL4wIfdXfzmjlpXrgRuNtr1seLXYY1KNZdCtmho8yw06Ye7eRg4Ijdnnyd-UlgJdHMv7bWE8KKfBJWVKflAAVbYjBc2ukVbNFueqcNSIBWtavmCIyQ17TaGZfpiV5ThbASHFehOCxXNa77guU-84rownm6rYoM4lHIZ_2R6-aosehqnrs4k3Xb19Ay8cKifHepw1KsmgYavWUEy");'>
+</div>
+</div>
+</div>
+</div>
+<div class="px-4 py-2">
+<h1 class="text-white tracking-tight text-[32px] font-bold leading-tight">Iron Paradise</h1>
+<div class="flex items-center gap-4 py-3 justify-between">
+<div class="flex items-center gap-3">
+<div class="text-primary flex items-center justify-center rounded-lg bg-primary/10 shrink-0 size-10">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<div>
+<p class="text-white text-base font-medium leading-tight">123 Muscle Way, Fitness City</p>
+<p class="text-white/50 text-xs">Open 24/7 • 1.2 miles away</p>
+</div>
+</div>
+<div class="shrink-0 bg-white/10 px-3 py-1.5 rounded-lg flex items-center gap-1">
+<span class="text-primary material-symbols-outlined !text-lg" style="font-variation-settings: 'FILL' 1">star</span>
+<p class="text-white text-sm font-bold">4.9</p>
+</div>
+</div>
+</div>
+<div class="px-4 py-4">
+<div class="flex h-12 flex-1 items-center justify-center rounded-xl bg-white/5 p-1.5 border border-white/5">
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 has-[:checked]:bg-primary has-[:checked]:text-black text-white/60 text-sm font-bold transition-all duration-200">
+<span class="truncate">Equipment</span>
+<input checked="" class="invisible w-0" name="view-toggle" type="radio" value="Equipment"/>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 has-[:checked]:bg-primary has-[:checked]:text-black text-white/60 text-sm font-bold transition-all duration-200">
+<span class="truncate">Passes</span>
+<input class="invisible w-0" name="view-toggle" type="radio" value="Passes"/>
+</label>
+</div>
+</div>
+<div class="px-4">
+<h3 class="text-white/40 text-xs font-bold uppercase tracking-[0.2em] mb-4">Available Facilities</h3>
+<div class="grid grid-cols-2 gap-3">
+<div class="bg-white/5 p-5 rounded-2xl border border-white/5 flex flex-col items-center justify-center gap-3 text-center">
+<div class="text-primary bg-primary/10 p-3 rounded-full">
+<span class="material-symbols-outlined">directions_run</span>
+</div>
+<p class="text-sm font-medium">Cardio Zone</p>
+</div>
+<div class="bg-white/5 p-5 rounded-2xl border border-white/5 flex flex-col items-center justify-center gap-3 text-center">
+<div class="text-primary bg-primary/10 p-3 rounded-full">
+<span class="material-symbols-outlined">fitness_center</span>
+</div>
+<p class="text-sm font-medium">Free Weights</p>
+</div>
+<div class="bg-white/5 p-5 rounded-2xl border border-white/5 flex flex-col items-center justify-center gap-3 text-center">
+<div class="text-primary bg-primary/10 p-3 rounded-full">
+<span class="material-symbols-outlined">sports_gymnastics</span>
+</div>
+<p class="text-sm font-medium">Yoga Studio</p>
+</div>
+<div class="bg-white/5 p-5 rounded-2xl border border-white/5 flex flex-col items-center justify-center gap-3 text-center">
+<div class="text-primary bg-primary/10 p-3 rounded-full">
+<span class="material-symbols-outlined">hot_tub</span>
+</div>
+<p class="text-sm font-medium">Sauna &amp; Spa</p>
+</div>
+</div>
+</div>
+<div class="px-4 py-8">
+<h3 class="text-white/40 text-xs font-bold uppercase tracking-[0.2em] mb-4">Select a Pass</h3>
+<div class="flex flex-col gap-4">
+<div class="relative flex items-center justify-between p-6 rounded-2xl bg-white/5 border-2 border-primary">
+<div class="flex flex-col gap-1">
+<span class="text-[10px] font-black text-primary uppercase tracking-widest">Best Value</span>
+<p class="text-white text-lg font-bold">Monthly Full Access</p>
+<p class="text-white/50 text-sm">Unlimited gym and classes</p>
+</div>
+<div class="text-right">
+<p class="text-2xl font-black text-white">$60</p>
+<p class="text-[10px] text-white/50 uppercase font-bold">per month</p>
+</div>
+</div>
+<div class="flex items-center justify-between p-6 rounded-2xl bg-white/5 border border-white/10">
+<div class="flex flex-col gap-1">
+<p class="text-white text-lg font-bold">Daily Entry</p>
+<p class="text-white/50 text-sm">Valid for 24 hours only</p>
+</div>
+<div class="text-right">
+<p class="text-2xl font-black text-white">$15</p>
+<p class="text-[10px] text-white/50 uppercase font-bold">per day</p>
+</div>
+</div>
+</div>
+</div>
+<div class="fixed bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black via-black/90 to-transparent pt-12">
+<button class="w-full h-14 bg-primary text-black font-black text-lg rounded-2xl shadow-[0_8px_24px_rgba(212,233,56,0.2)] flex items-center justify-center gap-2 active:scale-[0.98] transition-transform">
+                Secure Your Spot
+                <span class="material-symbols-outlined font-black">arrow_forward</span>
+</button>
+</div>
+</div>
+
+</body></html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Booking Summary - Openkora</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#D8F24F",
+                        "background-dark": "#000000",
+                        "surface-dark": "#121212",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        body {
+            font-family: 'Lexend', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .neon-glow {
+            box-shadow: 0 0 20px rgba(216, 242, 79, 0.3);
+        }
+        :root {
+            --primary-color: #D8F24F;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+</style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-dark min-h-screen text-white">
+<div class="relative flex h-full min-h-screen w-full flex-col max-w-[430px] mx-auto overflow-x-hidden border-x border-white/5">
+<header class="sticky top-0 z-10 flex items-center bg-background-dark/80 backdrop-blur-md p-4 pb-2 justify-between">
+<div class="text-white flex size-12 shrink-0 items-center justify-center cursor-pointer">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</div>
+<h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pr-12">Booking Summary</h2>
+</header>
+<main class="flex-1 overflow-y-auto">
+<h3 class="text-white/60 text-sm font-semibold uppercase tracking-widest px-4 pb-3 pt-6">Selected Venue</h3>
+<div class="p-4 pt-0">
+<div class="flex items-stretch justify-between gap-4 rounded-xl bg-surface-dark p-4 border border-white/10">
+<div class="flex flex-col gap-1 flex-[2_2_0px]">
+<p class="text-white/50 text-xs font-normal leading-normal">Location</p>
+<p class="text-white text-base font-bold leading-tight">Iron Haven Gym</p>
+<p class="text-white/50 text-sm font-normal leading-normal">Downtown Elite Branch</p>
+<div class="mt-3 inline-flex w-fit items-center px-2 py-1 rounded bg-primary/10 text-primary text-[10px] font-bold uppercase tracking-wider border border-primary/20">
+                            Verified Equipment
+                        </div>
+</div>
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg flex-1" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDUfYlfIaMV6HueS0VKMC8IwHI2PR46uAQDzxzrAlwFLNwYHl62p6SyJ3cEYmRToF3upKulGnzqvCUL0XJ-D2NcvA-y3Z1A_4RDzm0W_GEAZlH2_QMYcD44Uot4w_GZTE9YhOLF1QB-YGzxRll6rNbUt_n7lO3A0jNZYHyQDeW4hW1a3UuJxvPa1ZSFFPGuHoSUKoT9uHO5JNrGiBfVGb8FKMyNxQqcoyJVKs5Mktr4Jz0yloKnJrq8t35eqYmg5qGEkOZvj1eZo9Zl");'>
+</div>
+</div>
+</div>
+<h3 class="text-white/60 text-sm font-semibold uppercase tracking-widest px-4 pb-3 pt-6">Booking Details</h3>
+<div class="flex flex-col gap-2 px-4">
+<div class="flex items-center gap-4 bg-surface-dark px-4 min-h-16 justify-between rounded-xl border border-white/10">
+<div class="flex items-center gap-4">
+<div class="text-primary flex items-center justify-center rounded-lg bg-primary/10 shrink-0 size-10">
+<span class="material-symbols-outlined" data-icon="fitness_center">fitness_center</span>
+</div>
+<p class="text-white text-base font-medium leading-normal flex-1 truncate">Treadmill - Station 4</p>
+</div>
+<div class="shrink-0"><p class="text-white/40 text-[10px] font-bold leading-normal uppercase tracking-tighter">Resource</p></div>
+</div>
+<div class="flex items-center gap-4 bg-surface-dark px-4 min-h-16 justify-between rounded-xl border border-white/10">
+<div class="flex items-center gap-4">
+<div class="text-primary flex items-center justify-center rounded-lg bg-primary/10 shrink-0 size-10">
+<span class="material-symbols-outlined" data-icon="calendar_today">calendar_today</span>
+</div>
+<p class="text-white text-base font-medium leading-normal flex-1 truncate">Monday, Oct 24, 2023</p>
+</div>
+<div class="shrink-0"><p class="text-white/40 text-[10px] font-bold leading-normal uppercase tracking-tighter">Date</p></div>
+</div>
+<div class="flex items-center gap-4 bg-surface-dark px-4 min-h-16 justify-between rounded-xl border border-white/10">
+<div class="flex items-center gap-4">
+<div class="text-primary flex items-center justify-center rounded-lg bg-primary/10 shrink-0 size-10">
+<span class="material-symbols-outlined" data-icon="schedule">schedule</span>
+</div>
+<p class="text-white text-base font-medium leading-normal flex-1 truncate">08:00 AM - 09:00 AM</p>
+</div>
+<div class="shrink-0"><p class="text-white/40 text-[10px] font-bold leading-normal uppercase tracking-tighter">Time</p></div>
+</div>
+</div>
+<h3 class="text-white/60 text-sm font-semibold uppercase tracking-widest px-4 pb-3 pt-8">Payment Summary</h3>
+<div class="px-4 pb-32">
+<div class="flex flex-col gap-4 rounded-xl bg-surface-dark p-5 border border-white/10">
+<div class="flex justify-between items-center">
+<p class="text-white/50 text-sm font-normal">Base Rate (1 Hour)</p>
+<p class="text-white text-sm font-medium">$15.00</p>
+</div>
+<div class="flex justify-between items-center">
+<p class="text-white/50 text-sm font-normal">Taxes &amp; Service Fees</p>
+<p class="text-white text-sm font-medium">$1.20</p>
+</div>
+<div class="h-px bg-white/10 my-1"></div>
+<div class="flex justify-between items-center">
+<p class="text-white text-base font-bold">Total Amount</p>
+<p class="text-primary text-2xl font-bold leading-tight tracking-tight">$16.20</p>
+</div>
+</div>
+</div>
+</main>
+<footer class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[430px] p-6 pt-2 bg-background-dark/95 backdrop-blur-lg">
+<button class="neon-glow flex w-full h-16 items-center justify-center gap-3 rounded-2xl bg-primary text-black font-extrabold text-lg transition-transform active:scale-95">
+<span class="material-symbols-outlined font-bold" data-icon="lock">lock</span>
+                Confirm &amp; Pay
+            </button>
+<div class="h-4"></div>
+</footer>
+</div>
+
+</body></html>

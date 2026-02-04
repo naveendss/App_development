@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f9f506",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#000000",
+                        "card-dark": "rgba(255, 255, 255, 0.08)",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.06);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<title>Openkora - My Bookings</title>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white min-h-screen">
+<div class="relative flex h-auto min-h-screen w-full max-w-[430px] mx-auto flex-col overflow-x-hidden shadow-2xl border-x border-white/5">
+<!-- TopAppBar -->
+<header class="sticky top-0 z-20 bg-background-dark/80 backdrop-blur-md">
+<div class="flex items-center p-4 pb-2 justify-between">
+<div class="text-white flex size-12 shrink-0 items-center justify-start">
+<span class="material-symbols-outlined cursor-pointer">arrow_back_ios</span>
+</div>
+<h2 class="text-white text-lg font-bold leading-tight tracking-tight flex-1 text-center">My Bookings</h2>
+<div class="size-12 flex items-center justify-end">
+<div class="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center border border-primary/30">
+<span class="material-symbols-outlined text-primary text-sm">person</span>
+</div>
+</div>
+</div>
+<!-- Tabs -->
+<div class="px-4">
+<div class="flex border-b border-white/10 justify-between">
+<a class="flex flex-col items-center justify-center border-b-2 border-b-primary text-white pb-3 pt-4 flex-1" href="#">
+<p class="text-sm font-bold leading-normal tracking-wide">Active</p>
+</a>
+<a class="flex flex-col items-center justify-center border-b-2 border-b-transparent text-white/40 pb-3 pt-4 flex-1" href="#">
+<p class="text-sm font-bold leading-normal tracking-wide">Past</p>
+</a>
+</div>
+</div>
+</header>
+<main class="flex-1 p-4 space-y-4">
+<!-- Booking Card 1 (Active) -->
+<div class="glass-card rounded-xl p-4 transition-all active:scale-[0.98]">
+<div class="flex items-start justify-between gap-4">
+<div class="flex flex-[2_2_0px] flex-col gap-4">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="bg-primary text-black text-[10px] font-black uppercase tracking-widest px-2 py-0.5 rounded-full">Upcoming</span>
+</div>
+<p class="text-white text-xl font-bold leading-tight mt-1">10:00 AM - 11:30 AM</p>
+<div class="flex flex-col gap-0.5">
+<p class="text-white/60 text-sm font-medium">Powerhouse Gym</p>
+<p class="text-white/40 text-xs">Monday, 24 Oct • Treadmill XL-02</p>
+</div>
+</div>
+</div>
+<div class="w-24 h-24 bg-center bg-no-repeat bg-cover rounded-lg shrink-0 border border-white/10" data-alt="Modern gym interior with treadmill rows" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDIa4NcqZmN-LV5dCktujqlABM89KP6b4G_EL_Ebxz6w5La-ITHXrf93HL2-fp-Q4oFQDk-fGujakyLHiMWwzO5BqALB2W3cY_Z7DxXaNWBwchnGlhc-GXGLD9nqAhRJZBvaCzKVKc9ZXVXTkUicZJmQTw5ZlJRQOrzjg06FVkXPfs0L1SBraMf0Z39gD76OItJYER0Nt29xSOfe0znxD33E6JOHBEbLkR-fihgd5H6twthSYQQ4_hafc8zlgWSdBk4bMHMTmBUPDPx");'>
+</div>
+</div>
+<div class="mt-4 pt-4 border-t border-white/5 flex items-center justify-between">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-xl">location_on</span>
+<span class="text-xs font-medium text-white/70">Downtown, 5th Ave</span>
+</div>
+<button class="flex items-center justify-center size-10 rounded-lg bg-primary text-black transition-colors hover:bg-white">
+<span class="material-symbols-outlined font-bold">qr_code_2</span>
+</button>
+</div>
+</div>
+<!-- Booking Card 2 (Active) -->
+<div class="glass-card rounded-xl p-4 transition-all active:scale-[0.98]">
+<div class="flex items-start justify-between gap-4">
+<div class="flex flex-[2_2_0px] flex-col gap-4">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="bg-primary text-black text-[10px] font-black uppercase tracking-widest px-2 py-0.5 rounded-full">Upcoming</span>
+</div>
+<p class="text-white text-xl font-bold leading-tight mt-1">05:00 PM - 06:00 PM</p>
+<div class="flex flex-col gap-0.5">
+<p class="text-white/60 text-sm font-medium">Iron Works Fitness</p>
+<p class="text-white/40 text-xs">Wednesday, 26 Oct • Boxing Ring B</p>
+</div>
+</div>
+</div>
+<div class="w-24 h-24 bg-center bg-no-repeat bg-cover rounded-lg shrink-0 border border-white/10" data-alt="Boxing training area with heavy bags" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBVAsa4uUdrgBt2h1NcyIHoUJVOwx7a6uc_l_jeqx--aFTZTQgnlbesQmfjvGFWUthmHN3AolUeGSvdwRVS2K85miJCd8SxgkKOBIdBFDfunuySEoq0-lsCELwKQNqOkAIFJ6Jj9r-qJalAHpWsHMFIiUzzM21zeZcCm-FZ9Q_VN-W2OpOuqoZ_HcM2adHh6e2h9xeLApPxygUzRr-SExqVkqPIOlfIyPk-CTGwxdg7ej-XYUh3jSw-E7pmVJQ9bjhFZUQK21Ns5bWH");'>
+</div>
+</div>
+<div class="mt-4 pt-4 border-t border-white/5 flex items-center justify-between">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-xl">location_on</span>
+<span class="text-xs font-medium text-white/70">Eastside Industrial</span>
+</div>
+<button class="flex items-center justify-center size-10 rounded-lg bg-primary text-black transition-colors hover:bg-white">
+<span class="material-symbols-outlined font-bold">qr_code_2</span>
+</button>
+</div>
+</div>
+<!-- Booking Card 3 (Active) -->
+<div class="glass-card rounded-xl p-4 transition-all active:scale-[0.98]">
+<div class="flex items-start justify-between gap-4">
+<div class="flex flex-[2_2_0px] flex-col gap-4">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="bg-primary text-black text-[10px] font-black uppercase tracking-widest px-2 py-0.5 rounded-full">Upcoming</span>
+</div>
+<p class="text-white text-xl font-bold leading-tight mt-1">08:00 AM - 09:30 AM</p>
+<div class="flex flex-col gap-0.5">
+<p class="text-white/60 text-sm font-medium">Elite Wellness Club</p>
+<p class="text-white/40 text-xs">Friday, 28 Oct • Yoga Studio 1</p>
+</div>
+</div>
+</div>
+<div class="w-24 h-24 bg-center bg-no-repeat bg-cover rounded-lg shrink-0 border border-white/10" data-alt="Minimalist yoga studio with wood floors" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDHVp7Zi9VFLJb0kNDpghpVUKzWnSJju5rfRJCpbCA34IE-06hXfT9-SVUh5hF6DQGE6BMvGLR9dxprtBJVJ8yjVph4cQRT2J4AgQpVIyXAIhFR9ZEpTPgObvfnH-Tp0X7pQ09muveEjNckbKk_3dX375sZOecIYmLhSEw4ktDvivjax8hJ9GG71hWQeVvAgwJ71g4bknnXRYlEt0r9tgIEs8N6nrUPHF6PqxIhdCSaRVAOgGscwdr9JUqPXNlUaCURoBASYz81KaDP");'>
+</div>
+</div>
+<div class="mt-4 pt-4 border-t border-white/5 flex items-center justify-between">
+<div class="flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-xl">location_on</span>
+<span class="text-xs font-medium text-white/70">North Hills Plaza</span>
+</div>
+<button class="flex items-center justify-center size-10 rounded-lg bg-primary text-black transition-colors hover:bg-white">
+<span class="material-symbols-outlined font-bold">qr_code_2</span>
+</button>
+</div>
+</div>
+<!-- Suggestion Section -->
+<div class="py-8 text-center">
+<p class="text-white/30 text-xs uppercase tracking-widest font-bold mb-4">Need another session?</p>
+<button class="w-full bg-white/5 border border-white/10 hover:bg-white/10 text-white font-bold py-4 rounded-xl transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">add_circle</span>
+                    Book New Equipment
+                </button>
+</div>
+</main>
+<!-- Bottom Navigation Bar (iOS Style) -->
+<nav class="sticky bottom-0 z-30 bg-background-dark/95 backdrop-blur-lg border-t border-white/5 px-6 py-4 flex justify-between items-center">
+<div class="flex flex-col items-center gap-1 text-white/40">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-medium">Home</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-white/40">
+<span class="material-symbols-outlined">search</span>
+<span class="text-[10px] font-medium">Explore</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">calendar_month</span>
+<span class="text-[10px] font-bold">Bookings</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-white/40">
+<span class="material-symbols-outlined">notifications</span>
+<span class="text-[10px] font-medium">Inbox</span>
+</div>
+<div class="flex flex-col items-center gap-1 text-white/40">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-[10px] font-medium">Profile</span>
+</div>
+</nav>
+<!-- iOS Home Indicator -->
+<div class="bg-background-dark py-2 flex justify-center w-full">
+<div class="w-32 h-1.5 bg-white/20 rounded-full"></div>
+</div>
+</div>
+</body></html>

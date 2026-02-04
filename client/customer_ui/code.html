@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Professional Equipment Selection</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#c0f425",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#0a0a0a",
+                        "card-dark": "#161811",
+                        "border-dark": "#2d3120"
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            -webkit-tap-highlight-color: transparent;
+            min-height: max(884px, 100dvh);
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .equipment-image-container::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.5));
+            pointer-events: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-dark font-display text-zinc-100 flex flex-col">
+<header class="sticky top-0 z-30 bg-background-dark/80 backdrop-blur-md border-b border-zinc-800">
+<div class="flex items-center justify-between px-4 py-4">
+<button class="flex items-center justify-center size-10 rounded-full hover:bg-zinc-800 transition-colors">
+<span class="material-symbols-outlined text-2xl">arrow_back_ios_new</span>
+</button>
+<h1 class="text-lg font-bold tracking-tight">Select Equipment</h1>
+<button class="flex items-center justify-center size-10 rounded-full hover:bg-zinc-800 transition-colors">
+<span class="material-symbols-outlined text-2xl">search</span>
+</button>
+</div>
+</header>
+<main class="flex-1 pb-32">
+<div class="flex gap-3 px-4 py-4 overflow-x-auto no-scrollbar">
+<div class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-xl bg-primary px-6 border border-primary">
+<p class="text-background-dark text-sm font-semibold">All Gear</p>
+</div>
+<div class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-xl bg-card-dark px-6 border border-border-dark">
+<p class="text-zinc-300 text-sm font-medium">Cardio</p>
+</div>
+<div class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-xl bg-card-dark px-6 border border-border-dark">
+<p class="text-zinc-300 text-sm font-medium">Weights</p>
+</div>
+<div class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-xl bg-card-dark px-6 border border-border-dark">
+<p class="text-zinc-300 text-sm font-medium">Functional</p>
+</div>
+</div>
+<div class="px-4 space-y-3">
+<div class="flex items-center gap-4 bg-card-dark border border-border-dark p-4 rounded-xl shadow-sm">
+<div class="equipment-image-container relative overflow-hidden rounded-lg size-16 shrink-0">
+<img alt="Treadmill" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCS_OD3aLEskIFkLDws4WPMJKHARso6N_GLqzgaVGmu7s_DtDNUtDdumgF5pPlsQSnA7J_xBrh5SVV7BP_LDPgc01CLkJrE654xh6nf34gs1_Ac18IerGS1ps4-gIFnhavzibIrlOxz2b61IycXy3CuJ9UDuAXtG2J7MOcpqZWTuqDpv92hC10QOxOJJyWDG5ulxc2rUOE6Uv9jHilM3lvmT11T3ESwJmi4KGqfnCZ5aQwHuDrhvs57c62SLzuRdDy2v5m-hFYePx4D"/>
+</div>
+<div class="flex flex-col flex-1">
+<p class="text-white text-base font-semibold leading-tight">Pro Treadmill X9</p>
+<p class="text-[#b2ba9c] text-xs font-normal mt-1 flex items-center gap-1">
+<span class="size-2 rounded-full bg-primary"></span> 12 Available
+                </p>
+</div>
+<div class="flex flex-col items-end gap-2">
+<p class="text-white text-sm font-bold">$12.00/hr</p>
+<button class="flex size-9 cursor-pointer items-center justify-center rounded-lg bg-primary text-background-dark hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined font-bold">add</span>
+</button>
+</div>
+</div>
+<div class="flex items-center gap-4 bg-card-dark border border-border-dark p-4 rounded-xl shadow-sm">
+<div class="equipment-image-container relative overflow-hidden rounded-lg size-16 shrink-0">
+<img alt="Spin Bike" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCabzIts6AveVEfTuWYSpCmTk5SZJ136oFZz3Llg-fdfHHPltlYyEdzVD11p6h4BtZuJOd7bqCedvSqQOmBt5iSepHJFQ08WuRx-COhqrJpmjc9v_VXV_w5ikb1LuVXu3xp7s05hN2wJt9UbU2MX1Xm-Y-c8_MtU60kymgXf3qhuW-QI-qo84ZDgLrX_8nDG3BM3C7H2Wq0n58HTx8hsQrTtfzl7AYestCUuKrdmnlSyliVcYpMT2BB20g9UMCPEzJ0JOJh1bR4UHB_"/>
+</div>
+<div class="flex flex-col flex-1">
+<p class="text-white text-base font-semibold leading-tight">Spin Cycle Plus</p>
+<p class="text-[#b2ba9c] text-xs font-normal mt-1 flex items-center gap-1">
+<span class="size-2 rounded-full bg-primary"></span> 5 Available
+                </p>
+</div>
+<div class="flex flex-col items-end gap-2">
+<p class="text-white text-sm font-bold">$8.50/hr</p>
+<button class="flex size-9 cursor-pointer items-center justify-center rounded-lg bg-primary text-background-dark hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined font-bold">add</span>
+</button>
+</div>
+</div>
+<div class="flex items-center gap-4 bg-card-dark border border-border-dark p-4 rounded-xl shadow-sm">
+<div class="equipment-image-container relative overflow-hidden rounded-lg size-16 shrink-0">
+<img alt="Kettlebells" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLdpiYVYNiu8rn_P2y6TTtJpBBwH9aDwByRNH5DZWecM5XvAMUsdYCRA2DUsgVTz5gMRxlUkxwIDsLxC6OxOKauHvJF6zEJ-aHIg7fd3mB5TiLdVY7cRo0Py-iL4VaEhKZ3ljtVHGiFp86FzYOnZeLAUI5izoET2kJOh6PmWOMnqbelsdO84dpE34pwalSBI47-v1aVsQtB4BbV4NCPLk2DX8CCEGPGK9wkj2ORz2SBqra-pZklbQ6vD_MTw2khFWzf2GxNfHSK_zn"/>
+</div>
+<div class="flex flex-col flex-1">
+<p class="text-white text-base font-semibold leading-tight">Elite Kettlebells</p>
+<p class="text-[#b2ba9c] text-xs font-normal mt-1 flex items-center gap-1">
+<span class="size-2 rounded-full bg-primary"></span> 2 Available
+                </p>
+</div>
+<div class="flex flex-col items-end gap-2">
+<p class="text-white text-sm font-bold">$4.00/hr</p>
+<button class="flex size-9 cursor-pointer items-center justify-center rounded-lg bg-primary text-background-dark hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined font-bold">add</span>
+</button>
+</div>
+</div>
+<div class="flex items-center gap-4 bg-card-dark border border-border-dark p-4 rounded-xl shadow-sm">
+<div class="equipment-image-container relative overflow-hidden rounded-lg size-16 shrink-0">
+<img alt="Power Rack" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3CKthMMSjl35-CjfodYUWNFJ4vxN1nhP4BQx6OZGZ9JsXaB6Qm18HO1UtLmcnuPRPN0RmHSOPMbTbPgVYtaVBsUhIsvCKagcsfQUQrMApNXhLzlDz-9Aw4S5_hsYPigG3MQSiu2skR7L3uGKzPsXViEpP5jDdrzfl9q8GHDPTxY5LBAPerk6LdvkUHXBYtnJQeb3_Io0lB5zNz_Ga6JqhdhHlKAIm4itqgUjymcglRyunxNOWjeuONCTMHoNYCDK2TiOjPIuHW1WX"/>
+</div>
+<div class="flex flex-col flex-1">
+<p class="text-white text-base font-semibold leading-tight">Olympic Power Rack</p>
+<p class="text-[#b2ba9c] text-xs font-normal mt-1 flex items-center gap-1">
+<span class="size-2 rounded-full bg-primary"></span> 3 Available
+                </p>
+</div>
+<div class="flex flex-col items-end gap-2">
+<p class="text-white text-sm font-bold">$15.00/hr</p>
+<button class="flex size-9 cursor-pointer items-center justify-center rounded-lg bg-primary text-background-dark hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined font-bold">add</span>
+</button>
+</div>
+</div>
+<div class="flex items-center gap-4 bg-card-dark border border-border-dark p-4 rounded-xl shadow-sm">
+<div class="equipment-image-container relative overflow-hidden rounded-lg size-16 shrink-0">
+<img alt="Dumbbells" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCb_jsO2OU63IXB-2JI9RVEZu7PDoAk_VeInSTjm1m6RVdVNIMjrCDALukWfJhQcpRiA3HPeGkhtoP1rUAZt-BvNdpd1_wqfRVPXwuvL5yXueNelznTnqy1pZwNKzWH3QYxtLnTbH3grU_g6P4eE9QeNcVagW_8jfxMzNJvmk421RYt3T5tNySME6N9BrgLwxVVQhubiAPjZ_0KIpSmbeQCndBmOqH4Ax1GJJt4cAxAeyRd9hnn1K3ZIaqj5vArZoXGrQTkGZfMRLIn"/>
+</div>
+<div class="flex flex-col flex-1">
+<p class="text-white text-base font-semibold leading-tight">Pro Dumbbell Set</p>
+<p class="text-[#b2ba9c] text-xs font-normal mt-1 flex items-center gap-1">
+<span class="size-2 rounded-full bg-primary"></span> 8 Available
+                </p>
+</div>
+<div class="flex flex-col items-end gap-2">
+<p class="text-white text-sm font-bold">$6.00/hr</p>
+<button class="flex size-9 cursor-pointer items-center justify-center rounded-lg bg-primary text-background-dark hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined font-bold">add</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<div class="fixed bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-background-dark via-background-dark to-transparent z-40">
+<button class="flex items-center justify-between w-full h-16 bg-primary rounded-2xl px-6 shadow-[0_8px_30px_rgb(192,244,37,0.3)] transition-transform active:scale-[0.98]">
+<div class="flex items-center gap-3">
+<div class="bg-black/10 rounded-lg px-2 py-1">
+<span class="text-background-dark text-sm font-bold">2</span>
+</div>
+<span class="text-background-dark font-bold text-base tracking-tight">View Selected Items</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-background-dark font-bold text-lg">$20.50</span>
+<span class="material-symbols-outlined text-background-dark">chevron_right</span>
+</div>
+</button>
+<div class="h-6"></div>
+</div>
+
+</body></html>

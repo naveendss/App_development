@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Detailed Pricing &amp; Slot Management - Openkora</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f9f506",
+                        "background-dark": "#000000",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        body {
+            font-family: 'Lexend', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+            background-color: #000000;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="dark:bg-background-dark text-white min-h-screen">
+<div class="flex flex-col w-full max-w-md mx-auto min-h-screen pb-32">
+<header class="sticky top-0 z-50 bg-black/80 backdrop-blur-md border-b border-zinc-800">
+<div class="flex items-center p-4 justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-white cursor-pointer">arrow_back_ios</span>
+<h2 class="text-white text-lg font-bold leading-tight tracking-tight">Treadmills</h2>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-white">more_horiz</span>
+</div>
+</div>
+</header>
+<main class="flex flex-col p-4 gap-6">
+<section class="flex items-center justify-between bg-zinc-900/50 rounded-xl p-4 border border-zinc-800">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">fitness_center</span>
+</div>
+<div>
+<p class="text-zinc-400 text-xs font-medium uppercase tracking-wider">Inventory</p>
+<p class="text-white text-lg font-bold">Total Units: 10</p>
+</div>
+</div>
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-zinc-800 text-zinc-300">
+<span class="material-symbols-outlined text-xl">edit</span>
+</button>
+</section>
+<section class="flex flex-col gap-4">
+<h3 class="text-zinc-400 text-xs font-bold uppercase tracking-widest px-1">Pricing &amp; Surge</h3>
+<div class="bg-zinc-900 rounded-2xl border border-zinc-800 divide-y divide-zinc-800">
+<div class="p-4 flex items-center justify-between">
+<div class="flex flex-col">
+<span class="text-white font-medium text-sm">Base Price</span>
+<span class="text-zinc-500 text-[11px]">Standard rate per hour</span>
+</div>
+<div class="relative flex items-center">
+<span class="absolute left-3 text-zinc-400 text-sm">$</span>
+<input class="w-24 bg-black border border-zinc-700 rounded-lg pl-7 pr-3 py-2 text-white font-bold text-right focus:border-primary focus:ring-1 focus:ring-primary outline-none" type="number" value="12"/>
+</div>
+</div>
+<div class="p-4 flex items-center justify-between">
+<div class="flex flex-col">
+<span class="text-white font-medium text-sm">Peak Hour Surge</span>
+<span class="text-primary text-[11px] font-bold">+20% auto-applied</span>
+</div>
+<div class="w-12 h-6 bg-primary rounded-full relative cursor-pointer">
+<div class="absolute right-1 top-1 w-4 h-4 bg-black rounded-full"></div>
+</div>
+</div>
+</div>
+</section>
+<section class="flex flex-col gap-4">
+<div class="flex items-center justify-between px-1">
+<h3 class="text-zinc-400 text-xs font-bold uppercase tracking-widest">Hourly Slots</h3>
+<span class="text-zinc-500 text-xs">Capacity Per Slot</span>
+</div>
+<div class="flex flex-col gap-3">
+<div class="flex items-center justify-between bg-zinc-900 border border-zinc-800 p-3 rounded-xl">
+<div class="flex flex-col min-w-[100px]">
+<span class="text-white text-sm font-bold">06:00 - 07:00</span>
+<div class="flex items-center gap-1 mt-1">
+<span class="bg-zinc-800 text-zinc-500 text-[9px] px-1.5 py-0.5 rounded font-bold uppercase tracking-tighter">Normal</span>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<input class="w-12 h-9 bg-black border border-zinc-700 rounded-lg text-center text-sm text-white font-bold focus:border-primary focus:ring-1 focus:ring-primary outline-none" type="number" value="8"/>
+<div class="w-11 h-6 bg-primary rounded-full relative cursor-pointer">
+<div class="absolute right-1 top-1 w-4 h-4 bg-black rounded-full"></div>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between bg-zinc-900 border border-zinc-700 p-3 rounded-xl ring-1 ring-primary/20">
+<div class="flex flex-col min-w-[100px]">
+<span class="text-white text-sm font-bold">07:00 - 08:00</span>
+<div class="flex items-center gap-1 mt-1">
+<span class="bg-primary text-black text-[9px] px-1.5 py-0.5 rounded font-bold uppercase tracking-tighter shadow-[0_0_8px_rgba(249,245,6,0.4)]">Surge Active</span>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<input class="w-12 h-9 bg-black border border-zinc-700 rounded-lg text-center text-sm text-white font-bold focus:border-primary focus:ring-1 focus:ring-primary outline-none" type="number" value="10"/>
+<div class="w-11 h-6 bg-primary rounded-full relative cursor-pointer">
+<div class="absolute right-1 top-1 w-4 h-4 bg-black rounded-full"></div>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between bg-zinc-900 border border-zinc-800 p-3 rounded-xl ring-1 ring-primary/20">
+<div class="flex flex-col min-w-[100px]">
+<span class="text-white text-sm font-bold">08:00 - 09:00</span>
+<div class="flex items-center gap-1 mt-1">
+<span class="bg-primary text-black text-[9px] px-1.5 py-0.5 rounded font-bold uppercase tracking-tighter shadow-[0_0_8px_rgba(249,245,6,0.4)]">Surge Active</span>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<input class="w-12 h-9 bg-black border border-zinc-700 rounded-lg text-center text-sm text-white font-bold focus:border-primary focus:ring-1 focus:ring-primary outline-none" type="number" value="10"/>
+<div class="w-11 h-6 bg-primary rounded-full relative cursor-pointer">
+<div class="absolute right-1 top-1 w-4 h-4 bg-black rounded-full"></div>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between bg-zinc-950/40 border border-dashed border-zinc-800 p-3 rounded-xl">
+<div class="flex flex-col min-w-[100px] opacity-40">
+<span class="text-white text-sm font-bold">09:00 - 10:00</span>
+<div class="flex items-center gap-1 mt-1">
+<span class="bg-zinc-800 text-zinc-500 text-[9px] px-1.5 py-0.5 rounded font-bold uppercase tracking-tighter">Normal</span>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<input class="w-12 h-9 bg-zinc-900 border border-zinc-800 rounded-lg text-center text-sm text-zinc-700 font-bold outline-none" disabled="" type="number" value="0"/>
+<div class="w-11 h-6 bg-zinc-800 rounded-full relative cursor-pointer">
+<div class="absolute left-1 top-1 w-4 h-4 bg-zinc-600 rounded-full"></div>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between bg-zinc-900 border border-zinc-800 p-3 rounded-xl">
+<div class="flex flex-col min-w-[100px]">
+<span class="text-white text-sm font-bold">10:00 - 11:00</span>
+<div class="flex items-center gap-1 mt-1">
+<span class="border border-zinc-700 text-zinc-500 text-[9px] px-1.5 py-0.5 rounded font-bold uppercase tracking-tighter cursor-pointer hover:bg-zinc-800">Apply Surge</span>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<input class="w-12 h-9 bg-black border border-zinc-700 rounded-lg text-center text-sm text-white font-bold focus:border-primary focus:ring-1 focus:ring-primary outline-none" type="number" value="8"/>
+<div class="w-11 h-6 bg-primary rounded-full relative cursor-pointer">
+<div class="absolute right-1 top-1 w-4 h-4 bg-black rounded-full"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<div class="fixed bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black via-black/80 to-transparent pointer-events-none">
+<div class="max-w-md mx-auto pointer-events-auto">
+<button class="w-full bg-primary text-black font-bold h-14 rounded-2xl flex items-center justify-center gap-2 shadow-[0_8px_24px_rgba(249,245,6,0.3)] active:scale-95 transition-transform">
+<span class="material-symbols-outlined font-bold">check_circle</span>
+                    SAVE CHANGES
+                </button>
+</div>
+</div>
+</div>
+
+</body></html>

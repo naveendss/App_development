@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Detailed Service &amp; Pass Pricing</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f9f506",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#000000",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        body {
+            font-family: 'Lexend', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .ios-status-bar {
+            height: 44px;
+        }
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white min-h-screen flex flex-col">
+<div class="sticky top-0 z-20 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-zinc-800">
+<div class="flex items-center p-4 pb-2 justify-between">
+<div class="flex size-10 items-center justify-start cursor-pointer">
+<span class="material-symbols-outlined text-2xl">arrow_back_ios</span>
+</div>
+<div class="flex-1 text-center">
+<h2 class="text-lg font-bold leading-tight tracking-tight">Services &amp; Pricing</h2>
+<p class="text-xs text-slate-500 dark:text-slate-400 font-medium text-center">Step 3 of 4</p>
+</div>
+<div class="size-10 flex items-center justify-end">
+<span class="material-symbols-outlined text-2xl text-primary">info</span>
+</div>
+</div>
+<div class="flex w-full flex-row items-center justify-center gap-3 py-3">
+<div class="h-1.5 w-6 rounded-full bg-primary/20"></div>
+<div class="h-1.5 w-6 rounded-full bg-primary/20"></div>
+<div class="h-1.5 w-10 rounded-full bg-primary shadow-[0_0_8px_rgba(249,245,6,0.5)]"></div>
+<div class="h-1.5 w-6 rounded-full bg-slate-200 dark:bg-zinc-800"></div>
+</div>
+</div>
+<main class="flex-1 px-4 pb-40">
+<div class="mt-6">
+<h3 class="text-xl font-bold leading-tight tracking-tight mb-1">Equipment Pricing</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400 mb-6">Set specific hourly or daily rates for premium equipment.</p>
+<div class="space-y-4">
+<div class="bg-zinc-900/50 border border-zinc-800 rounded-2xl p-4 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">directions_run</span>
+</div>
+<div>
+<h4 class="font-bold text-sm">Treadmills</h4>
+<p class="text-xs text-slate-400">Available: 12 Units</p>
+</div>
+</div>
+<button class="flex items-center gap-2 bg-primary text-black px-4 py-2 rounded-lg font-bold text-xs">
+<span class="material-symbols-outlined text-sm">add</span>
+                    Set Price
+                </button>
+</div>
+<div class="bg-zinc-900 border border-primary/30 rounded-2xl p-4">
+<div class="flex items-center justify-between mb-3">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-black">pedal_bike</span>
+</div>
+<div>
+<h4 class="font-bold text-sm">Cycles</h4>
+<p class="text-xs text-slate-400">Rate: $5.00/hr</p>
+</div>
+</div>
+<button class="text-primary material-symbols-outlined">edit_square</button>
+</div>
+<div class="grid grid-cols-2 gap-3">
+<div class="bg-black/40 rounded-lg p-2 border border-zinc-800">
+<p class="text-[10px] text-slate-500 uppercase font-bold tracking-wider">Daily Cap</p>
+<p class="text-sm font-semibold">$20.00</p>
+</div>
+<div class="bg-black/40 rounded-lg p-2 border border-zinc-800">
+<p class="text-[10px] text-slate-500 uppercase font-bold tracking-wider">Premium Access</p>
+<p class="text-sm font-semibold">Included</p>
+</div>
+</div>
+</div>
+<div class="flex gap-2 flex-wrap pt-2">
+<div class="flex h-9 items-center justify-center gap-x-2 rounded-lg bg-zinc-900 px-3 border border-zinc-800">
+<p class="text-zinc-400 text-xs font-medium">Strength Training</p>
+<span class="material-symbols-outlined text-xs text-zinc-600">add</span>
+</div>
+<div class="flex h-9 items-center justify-center gap-x-2 rounded-lg bg-zinc-900 px-3 border border-zinc-800">
+<p class="text-zinc-400 text-xs font-medium">Yoga Mats</p>
+<span class="material-symbols-outlined text-xs text-zinc-600">add</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-10">
+<div class="flex items-center justify-between mb-4">
+<div>
+<h3 class="text-xl font-bold leading-tight tracking-tight">Membership Passes</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400">Create custom duration passes for users.</p>
+</div>
+<button class="w-10 h-10 rounded-full bg-primary text-black flex items-center justify-center shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined font-bold">add</span>
+</button>
+</div>
+<div class="space-y-4">
+<div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden">
+<div class="p-4 space-y-4">
+<div class="flex flex-col gap-1.5">
+<label class="text-[11px] font-bold text-slate-500 uppercase tracking-wider ml-1">Pass Name</label>
+<input class="w-full h-12 bg-black border border-zinc-800 focus:border-primary focus:ring-0 rounded-xl px-4 text-sm font-medium outline-none transition-all" placeholder="e.g. Starter Pass" type="text" value="Starter Pass"/>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="flex flex-col gap-1.5">
+<label class="text-[11px] font-bold text-slate-500 uppercase tracking-wider ml-1">Duration</label>
+<div class="relative">
+<select class="w-full h-12 bg-black border border-zinc-800 focus:border-primary focus:ring-0 rounded-xl px-4 text-sm font-medium outline-none appearance-none">
+<option>7 Days</option>
+<option selected="">14 Days</option>
+<option>30 Days</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-3 text-slate-500 pointer-events-none">expand_more</span>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="text-[11px] font-bold text-slate-500 uppercase tracking-wider ml-1">Rate (USD)</label>
+<div class="relative">
+<span class="absolute left-4 top-3.5 text-slate-500 text-sm">$</span>
+<input class="w-full h-12 bg-black border border-zinc-800 focus:border-primary focus:ring-0 rounded-xl pl-8 pr-4 text-sm font-bold outline-none" type="number" value="45.00"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden">
+<div class="p-4 space-y-4">
+<div class="flex flex-col gap-1.5">
+<label class="text-[11px] font-bold text-slate-500 uppercase tracking-wider ml-1">Pass Name</label>
+<input class="w-full h-12 bg-black border border-zinc-800 focus:border-primary focus:ring-0 rounded-xl px-4 text-sm font-medium outline-none transition-all" placeholder="e.g. Pro Monthly" type="text" value="Pro Monthly"/>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="flex flex-col gap-1.5">
+<label class="text-[11px] font-bold text-slate-500 uppercase tracking-wider ml-1">Duration</label>
+<div class="relative">
+<select class="w-full h-12 bg-black border border-zinc-800 focus:border-primary focus:ring-0 rounded-xl px-4 text-sm font-medium outline-none appearance-none">
+<option>7 Days</option>
+<option>14 Days</option>
+<option selected="">30 Days</option>
+<option>90 Days</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-3 text-slate-500 pointer-events-none">expand_more</span>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="text-[11px] font-bold text-slate-500 uppercase tracking-wider ml-1">Rate (USD)</label>
+<div class="relative">
+<span class="absolute left-4 top-3.5 text-slate-500 text-sm">$</span>
+<input class="w-full h-12 bg-black border border-zinc-800 focus:border-primary focus:ring-0 rounded-xl pl-8 pr-4 text-sm font-bold outline-none" type="number" value="89.00"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+<button class="w-full py-4 border-2 border-dashed border-zinc-800 rounded-2xl text-slate-500 text-sm font-medium flex items-center justify-center gap-2 hover:border-primary/50 hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-lg">add_circle</span>
+                Add another pass type
+            </button>
+</div>
+</div>
+<div class="mt-8 p-4 rounded-xl bg-primary/10 border border-primary/20 flex gap-3">
+<span class="material-symbols-outlined text-primary">analytics</span>
+<p class="text-xs leading-relaxed text-slate-600 dark:text-slate-300">
+            Gyms with at least <span class="text-primary font-bold">3 custom pass types</span> attract a more diverse range of fitness enthusiasts.
+        </p>
+</div>
+</main>
+<div class="fixed bottom-0 left-0 right-0 p-4 pb-8 bg-gradient-to-t from-background-light dark:from-background-dark via-background-light dark:via-background-dark to-transparent z-30">
+<button class="w-full bg-primary hover:bg-yellow-400 text-black h-14 rounded-xl font-bold text-lg shadow-lg shadow-primary/20 transition-all active:scale-[0.98] flex items-center justify-center gap-2">
+<span>Save &amp; Continue</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+
+</body></html>

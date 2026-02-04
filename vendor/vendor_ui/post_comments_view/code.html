@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Openkora - Post Comments</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f9f506",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#000000",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-white">
+<div class="relative flex min-h-screen w-full flex-col max-w-[430px] mx-auto bg-background-light dark:bg-background-dark border-x border-white/5">
+<!-- TopAppBar -->
+<header class="sticky top-0 z-50 flex items-center bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-md px-4 py-3 border-b border-white/10">
+<div class="flex size-10 shrink-0 items-center justify-start cursor-pointer">
+<span class="material-symbols-outlined text-white text-2xl">arrow_back_ios</span>
+</div>
+<h2 class="text-white text-lg font-bold leading-tight tracking-tight flex-1 text-center pr-10">Comments</h2>
+</header>
+<main class="flex-1 pb-24">
+<!-- Original Post Pinned (High Contrast) -->
+<div class="bg-white/5 p-4 mb-2 border-b border-white/10">
+<div class="flex items-start gap-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-12 shrink-0" data-alt="Profile photo of a professional athlete" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDMK-KstvDj1d3wke7Y1-sc1c3vetaiEo6EkoABisJAoRh6FLwenlslnyuXWqzwCA0AQ4P6R0T5xyAbnRnR2AzWcGjup1gAw8IR2cy9bfGKg0isR1hRWsTvIDGmZMDiObxsbI4RY8dGUmkfm0Et0feK24W_KjGZQYMZku40LZlTQs9coQ-si3cDUmQFbsYriEC5_NlbRfuEzGC4j-RhzPtYYPCPs0XmMekO1NjbRyWbgUJ-e40muR6z90u_RyxroizZgys9Yh4WchIz");'></div>
+<div class="flex flex-col flex-1">
+<div class="flex items-center justify-between">
+<span class="font-bold text-base text-white">Marcus Thorne</span>
+<span class="text-white/40 text-xs">4h ago</span>
+</div>
+<p class="text-white/90 text-[15px] leading-relaxed mt-1">
+                            Just finished a session at the new Westside branch. The lifting platforms are top-tier. Highly recommend the recovery zone after! 🏋️‍♂️🔥
+                        </p>
+<div class="mt-3 flex items-center gap-6">
+<div class="flex items-center gap-1.5 text-white/60">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+<span class="text-sm">128</span>
+</div>
+<div class="flex items-center gap-1.5 text-white/60">
+<span class="material-symbols-outlined text-[20px]">chat_bubble</span>
+<span class="text-sm">24</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- SectionHeader -->
+<div class="px-4 py-2 mt-2">
+<h4 class="text-white/40 text-[11px] font-bold leading-normal tracking-widest uppercase">Community Discussion</h4>
+</div>
+<!-- SingleComment (Regular) -->
+<div class="flex w-full flex-row items-start justify-start gap-3 p-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-10 shrink-0 border border-white/10" data-alt="User avatar with gym gear" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA6mVMcGSdOMzZsMvjvyHktw7JYe1z1-Qpz2TMJc28Vdfdf7zomTxm32x6vE88c5mkCPL4wPxXhICapZ59JSTADOwPK_7JSTodEMTV0V0XrAUS_t-m6-H5TTVTGrd5JKft4LQSDYVJ0GG0wDmMVzKT4Z0Bfgx1b0BFHg8jBNVoF3QsiQPX4rfhBYoFacABjJh28bgdtvIY-YGOBRA2kzHEXBJPReUnb5IkmaAxikBeUn2NRurjHhYou7CrnG_0leRh7GxQyG8w8Bue2");'></div>
+<div class="flex h-full flex-1 flex-col items-start justify-start">
+<div class="flex w-full flex-row items-center justify-start gap-x-2">
+<p class="text-white text-sm font-bold">Alex Rivera</p>
+<p class="text-white/40 text-xs font-normal">2h ago</p>
+</div>
+<p class="text-white/80 text-sm font-normal mt-1">Anyone tried the new power rack at the Downtown branch? It looks solid!</p>
+<div class="flex w-full flex-row items-center justify-start gap-6 pt-3">
+<div class="flex items-center gap-1.5 text-white/40 group cursor-pointer hover:text-primary">
+<span class="material-symbols-outlined text-[18px]">thumb_up</span>
+<p class="text-xs">12</p>
+</div>
+<p class="text-white/40 text-xs font-bold uppercase tracking-tight cursor-pointer hover:text-white">Reply</p>
+</div>
+</div>
+</div>
+<!-- SingleComment (Vendor - Indented Reply) -->
+<div class="flex w-full flex-row items-start justify-start gap-3 p-4 pl-12">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-9 shrink-0 border border-primary/30" data-alt="Official gym brand logo" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCebzdR5RqIQhx90n8iaGch49gzsP_BpOowE38Vjs_ohEYZ4A1vbhbyfZkgzqgGjNc7zH71jMG4YyI6051z24V4TRfdzQqbDlZwCpUW1mTWtR5A_ahE2Db8w2GJhVuQDTytfH5bkR0o8I9z_RlQZD8tr3uhzcKuG0OSsaV_jwkyfCf-17gueWFusp8J8i86xQK4zHk8ZsQx1JooB-ZvZKdCx3qcdIK3TL3KlCzW4uRE7n7A3wVjz5tImA9stQ8z4wxddNsBKbkHpUAZ");'></div>
+<div class="flex h-full flex-1 flex-col items-start justify-start">
+<div class="flex w-full flex-row items-center flex-wrap gap-x-2">
+<p class="text-white text-sm font-bold">Openkora Pro</p>
+<div class="bg-primary text-black text-[9px] font-black uppercase px-1.5 py-0.5 rounded-sm">Vendor</div>
+<p class="text-white/40 text-xs font-normal">1h ago</p>
+</div>
+<p class="text-white/80 text-sm font-normal mt-1 leading-snug">It's our latest addition! We've also added calibrated plates. Come check it out!</p>
+<div class="flex w-full flex-row items-center justify-start gap-6 pt-3">
+<div class="flex items-center gap-1.5 text-primary">
+<span class="material-symbols-outlined text-[18px] fill-1" style="font-variation-settings: 'FILL' 1;">thumb_up</span>
+<p class="text-xs font-bold">24</p>
+</div>
+<p class="text-white/40 text-xs font-bold uppercase tracking-tight cursor-pointer hover:text-white">Reply</p>
+</div>
+</div>
+</div>
+<!-- SingleComment (Regular) -->
+<div class="flex w-full flex-row items-start justify-start gap-3 p-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-10 shrink-0 border border-white/10" data-alt="Casual headshot of a woman" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCbZ-Xj3hbHmKI6GLQmrZ63WYVa1mpuZhrOAXiu1QCEfSEQIKeJcghnWQS8d0dh6Y_6fcbA_8mjlrchkOpPbN-lOs2pVdb-SWF12xatY-Vu8rMtq4CBvzV28rfeYt3i49i_iL8wD02boxtX-KZbpWcjqEBvCSkGYqv2m9DFEaMOnzfnMKjy42zRYfdDzORSNDscZU22uNS6u82Hv5QjhLof9Y692sNBQPYLR6dhRuR34oj_kXVnALd35rBvajFe0hSCj35BvgBXk6fs");'></div>
+<div class="flex h-full flex-1 flex-col items-start justify-start">
+<div class="flex w-full flex-row items-center justify-start gap-x-2">
+<p class="text-white text-sm font-bold">Sarah Chen</p>
+<p class="text-white/40 text-xs font-normal">45m ago</p>
+</div>
+<p class="text-white/80 text-sm font-normal mt-1">Is it usually busy around 6 PM? Trying to plan my leg day.</p>
+<div class="flex w-full flex-row items-center justify-start gap-6 pt-3">
+<div class="flex items-center gap-1.5 text-white/40 group cursor-pointer hover:text-primary">
+<span class="material-symbols-outlined text-[18px]">thumb_up</span>
+<p class="text-xs">3</p>
+</div>
+<p class="text-white/40 text-xs font-bold uppercase tracking-tight cursor-pointer hover:text-white">Reply</p>
+</div>
+</div>
+</div>
+<!-- SingleComment (Regular) -->
+<div class="flex w-full flex-row items-start justify-start gap-3 p-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-10 shrink-0 border border-white/10" data-alt="Portrait of a male gym enthusiast" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDMePwVTqyTY9u1IprtSczzPKWfL5AuqIA47luuCnhiR8zSvYkUhuZV333N-0NxWbUZVs3ARcr7y5t3o2rsthSXGmdOtPqmtHeTHPCwlUbOkLuHlGnm0YNffvSpuxpFU2XuNknHa2Mkake44RZ7s-_9ufZ3YqzuDsdukyBJcUMoQm3LiBgTHVW5I_ipkWmc_5S6jTnzLRyxy9vc7f0oPRO7fYajk-6uFtfj2tx6j0l5iZrnOrd2BpVRRHAp495S-NQIYttnHX7Fv1ro");'></div>
+<div class="flex h-full flex-1 flex-col items-start justify-start">
+<div class="flex w-full flex-row items-center justify-start gap-x-2">
+<p class="text-white text-sm font-bold">James Miller</p>
+<p class="text-white/40 text-xs font-normal">12m ago</p>
+</div>
+<p class="text-white/80 text-sm font-normal mt-1">The lighting in that branch is perfect for progress shots haha! See you all there tonight.</p>
+<div class="flex w-full flex-row items-center justify-start gap-6 pt-3">
+<div class="flex items-center gap-1.5 text-white/40 group cursor-pointer">
+<span class="material-symbols-outlined text-[18px]">thumb_up</span>
+<p class="text-xs">0</p>
+</div>
+<p class="text-white/40 text-xs font-bold uppercase tracking-tight cursor-pointer hover:text-white">Reply</p>
+</div>
+</div>
+</div>
+</main>
+<!-- Sticky Bottom Input -->
+<footer class="fixed bottom-0 left-0 right-0 z-50 max-w-[430px] mx-auto bg-black border-t border-white/10 p-4 pb-8">
+<div class="flex items-center gap-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-8 shrink-0" data-alt="Current user mini avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB5IrQIFxVlEjuvyhAqtAJF3DOQR0YuH5i9HgcQXJHm7OpLzX4b9_RRWBwZtSvKszgVOWO_NbKXqMqMF3FBf-n0gJRGK_PKlkRvnEBLwuQ5smSFl-Ct29SXPQmDbe880A2INNuZ8z4qCJcXIrM01NqG-WMA-erF4X7Yn240Cccd3ZDCnQZz8n3gTSWdNL9u6yTerMbAguu1WqPhZzI7lWYiZH8xRPX_3EYmVNrNd2mnUnF88GEjTqnSIzDvqD-7OVnYH7R5wV1vxOm-");'></div>
+<div class="relative flex-1">
+<input class="w-full bg-white/5 border-none rounded-full py-2.5 pl-4 pr-12 text-sm text-white placeholder:text-white/30 focus:ring-1 focus:ring-primary/50 transition-all" placeholder="Add a comment..." type="text"/>
+<button class="absolute right-1 top-1/2 -translate-y-1/2 flex size-9 items-center justify-center rounded-full bg-primary text-black shadow-lg active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[20px] font-bold">send</span>
+</button>
+</div>
+</div>
+<!-- iOS Home Indicator Spacing -->
+<div class="h-2"></div>
+</footer>
+</div>
+
+```</body></html>

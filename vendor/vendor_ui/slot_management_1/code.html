@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Inventory &amp; Slot Overview - Openkora Vendor</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f9f506",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#000000",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        body {
+            font-family: 'Lexend', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-dark text-white min-h-screen">
+<div class="flex flex-col w-full max-w-md mx-auto min-h-screen pb-10">
+<header class="sticky top-0 z-50 bg-black/80 backdrop-blur-lg border-b border-zinc-900">
+<div class="flex items-center p-4 justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-white cursor-pointer">arrow_back_ios</span>
+<h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">Inventory &amp; Slot Overview</h2>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-white">tune</span>
+</div>
+</div>
+<div class="flex overflow-x-auto hide-scrollbar px-4 py-3 gap-3 border-b border-zinc-900">
+<div class="flex flex-col items-center justify-center min-w-[54px] h-16 rounded-xl border border-primary bg-primary/10">
+<p class="text-[10px] uppercase font-bold text-primary">Oct</p>
+<p class="text-lg font-bold text-primary">12</p>
+<p class="text-[9px] font-medium text-primary text-center">TODAY</p>
+</div>
+<div class="flex flex-col items-center justify-center min-w-[54px] h-16 rounded-xl border border-zinc-800">
+<p class="text-[10px] uppercase font-bold text-zinc-500">Oct</p>
+<p class="text-lg font-bold text-white">13</p>
+<p class="text-[9px] font-medium text-zinc-500 text-center">FRI</p>
+</div>
+<div class="flex flex-col items-center justify-center min-w-[54px] h-16 rounded-xl border border-zinc-800">
+<p class="text-[10px] uppercase font-bold text-zinc-500">Oct</p>
+<p class="text-lg font-bold text-white">14</p>
+<p class="text-[9px] font-medium text-zinc-500 text-center">SAT</p>
+</div>
+<div class="flex flex-col items-center justify-center min-w-[54px] h-16 rounded-xl border border-zinc-800">
+<p class="text-[10px] uppercase font-bold text-zinc-500">Oct</p>
+<p class="text-lg font-bold text-white">15</p>
+<p class="text-[9px] font-medium text-zinc-500 text-center">SUN</p>
+</div>
+<div class="flex flex-col items-center justify-center min-w-[54px] h-16 rounded-xl border border-zinc-800">
+<p class="text-[10px] uppercase font-bold text-zinc-500">Oct</p>
+<p class="text-lg font-bold text-white">16</p>
+<p class="text-[9px] font-medium text-zinc-500 text-center">MON</p>
+</div>
+</div>
+<div class="p-4 bg-black">
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-zinc-500 text-xl group-focus-within:text-primary">search</span>
+<input class="w-full h-11 bg-zinc-900 border-none rounded-xl pl-10 pr-4 text-white text-sm focus:ring-1 focus:ring-primary placeholder-zinc-500" placeholder="Search equipment or passes..." type="text"/>
+</div>
+</div>
+</header>
+<main class="flex flex-col p-4 gap-4">
+<div class="flex flex-col overflow-hidden rounded-2xl bg-zinc-900 border border-zinc-800 shadow-xl">
+<div class="flex p-4 gap-4">
+<div class="w-24 h-24 bg-center bg-no-repeat bg-cover rounded-xl shrink-0" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDb9YuJtZyGpnuKZmJGs4pMwP7HbI65RXvCooDBirLGTCy0dP-mvVhdObhSP0X7XcVXL7bUNqARAdF0Nwystfz67y8N9LuXMJbFZXXFR_JiccHGRfXZamTUx2eBZtvY6OLdq54c9ZFuvhcNGr7i0cQDv-aizsBGQP8h_mAWrJ0RhMCB07nifW7cjrm6dH4mp8XDNmJaJWWtnT2MMLleAMY4CysJ8mnUfBH8S1gntJi5aX2xz_XWR8g0zatZKzQGgvHp49j9R2diR4uG");'></div>
+<div class="flex flex-col justify-center flex-1">
+<div class="flex items-start justify-between">
+<div>
+<h3 class="text-white text-lg font-bold leading-tight">Treadmills</h3>
+<p class="text-zinc-400 text-xs font-medium">10 Units Available</p>
+</div>
+<span class="flex items-center gap-1 bg-zinc-800 text-zinc-400 text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider">
+<span class="w-1.5 h-1.5 rounded-full bg-green-500"></span>
+                                8/10 active
+                            </span>
+</div>
+<div class="mt-3 flex items-baseline gap-1">
+<span class="text-primary text-xl font-bold">$12</span>
+<span class="text-zinc-500 text-xs font-normal">Base Rate / hr</span>
+</div>
+</div>
+</div>
+<div class="px-4 pb-4">
+<button class="w-full bg-primary text-black font-bold h-11 rounded-xl flex items-center justify-center gap-2 active:scale-[0.98] transition-all">
+<span class="material-symbols-outlined text-xl">settings_input_component</span>
+                        Manage Pricing &amp; Slots
+                    </button>
+</div>
+</div>
+<div class="flex flex-col overflow-hidden rounded-2xl bg-zinc-900 border border-zinc-800 shadow-xl">
+<div class="flex p-4 gap-4">
+<div class="w-24 h-24 bg-center bg-no-repeat bg-cover rounded-xl shrink-0" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAiuTaf3Zd67U30yohLQjOqxCjQFDFKWeS8pfDx1OksUu7B-bmhqd9Ko1olfwf30n1Da_ZQLaYsBCFqh5iQrKIMvkg27JAaGIUj-8ROI-692jxQjzL4V7u_ccUjwLSrgMY0iUnVNIerF-fFbo25aNCmSCKsUqhKtQCyq28qAxdvBBTQN3VHrLHQojggXy5IBeLzo4Y2XZ6zRh09dyCcYdEPC__Zp4SfK-w1C6RmPzlsRolzFEK-UINCyhURUPv-znToiYbAStbBjDDB");'></div>
+<div class="flex flex-col justify-center flex-1">
+<div class="flex items-start justify-between">
+<div>
+<h3 class="text-white text-lg font-bold leading-tight">Spin Cycles</h3>
+<p class="text-zinc-400 text-xs font-medium">15 Units Available</p>
+</div>
+<span class="flex items-center gap-1 bg-zinc-800 text-zinc-400 text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider">
+<span class="w-1.5 h-1.5 rounded-full bg-green-500"></span>
+                                12/15 active
+                            </span>
+</div>
+<div class="mt-3 flex items-baseline gap-1">
+<span class="text-primary text-xl font-bold">$15</span>
+<span class="text-zinc-500 text-xs font-normal">Base Rate / hr</span>
+</div>
+</div>
+</div>
+<div class="px-4 pb-4">
+<button class="w-full bg-primary text-black font-bold h-11 rounded-xl flex items-center justify-center gap-2 active:scale-[0.98] transition-all">
+<span class="material-symbols-outlined text-xl">settings_input_component</span>
+                        Manage Pricing &amp; Slots
+                    </button>
+</div>
+</div>
+<div class="flex flex-col overflow-hidden rounded-2xl bg-zinc-900 border border-zinc-800 shadow-xl">
+<div class="flex p-4 gap-4">
+<div class="w-24 h-24 bg-center bg-no-repeat bg-cover rounded-xl shrink-0" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA6NndhYoLaPJgYpvWvoUedelv28HjUX1jV__3-jdbNM_nwqFHwu9OTt701y6tAnyTISaLlTDyOZ8jxaxcuL4ETZw-jlk7LCuKClKxhYM5LgaCxUHLuVD_9jSqvYQmq_anATs3SBfDFUsEzUHxlL1amrU-KuSJ_BQuAvub06nOgKWVrc0j-Ndy-r6cuiJOt2CI2hI6RKkP2O4nFa8o_Vfby4ed1IlQes_EyJ7wzj5IdegxYydZ9PrRMlMtILX5RVH1m1RhKsJs4GNfI");'></div>
+<div class="flex flex-col justify-center flex-1">
+<div class="flex items-start justify-between">
+<div>
+<h3 class="text-white text-lg font-bold leading-tight">One-Day Passes</h3>
+<p class="text-zinc-400 text-xs font-medium">Daily Membership</p>
+</div>
+<span class="flex items-center gap-1 bg-zinc-800 text-zinc-400 text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider">
+<span class="w-1.5 h-1.5 rounded-full bg-green-500"></span>
+                                Active
+                            </span>
+</div>
+<div class="mt-3 flex items-baseline gap-1">
+<span class="text-primary text-xl font-bold">$45</span>
+<span class="text-zinc-500 text-xs font-normal">Base Rate / pass</span>
+</div>
+</div>
+</div>
+<div class="px-4 pb-4">
+<button class="w-full bg-primary text-black font-bold h-11 rounded-xl flex items-center justify-center gap-2 active:scale-[0.98] transition-all">
+<span class="material-symbols-outlined text-xl">settings_input_component</span>
+                        Manage Pricing &amp; Slots
+                    </button>
+</div>
+</div>
+<div class="fixed bottom-6 right-6">
+<button class="w-14 h-14 bg-white text-black rounded-full flex items-center justify-center shadow-2xl active:scale-95 transition-all">
+<span class="material-symbols-outlined text-3xl">add</span>
+</button>
+</div>
+</main>
+</div>
+
+</body></html>

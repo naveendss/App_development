@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Booking Pass Detail - Openkora</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f9f506",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#23220f",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .qr-gradient {
+            background: linear-gradient(180deg, #f9f506 0%, #23220f 100%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-white">
+<!-- Top App Bar -->
+<div class="relative flex h-auto w-full flex-col bg-primary dark:bg-primary group/design-root overflow-x-hidden">
+<div class="flex items-center p-4 pb-2 justify-between">
+<div class="text-background-dark flex size-12 shrink-0 items-center cursor-pointer">
+<span class="material-symbols-outlined text-[24px]">arrow_back_ios</span>
+</div>
+<h2 class="text-background-dark text-lg font-bold leading-tight tracking-tight flex-1 text-center">Booking Pass</h2>
+<div class="flex w-12 items-center justify-end">
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 bg-transparent text-background-dark gap-2 text-base font-bold leading-normal p-0">
+<span class="material-symbols-outlined text-[24px]">share</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Hero Header Area -->
+<div class="bg-primary pt-4 pb-12 px-6 rounded-b-[2.5rem]">
+<div class="flex flex-col items-center text-center gap-2">
+<div class="bg-background-dark/10 p-4 rounded-2xl mb-2">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-xl h-20 w-20 shadow-lg" data-alt="Gym logo featuring a minimalist barbell icon" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCAErLmhQGaaYqSycQaW2Yv_Lm5PS2YRUkUdWYYxZaGxhmSKb8eyzrT7xTXBgOef0sgq0-E14oEaCVk2otb0KaUjWd2kcktNBa6S6RzlEfIpmtGkoBO7_Q5OeELfMW1K_WJBMh7MK9cBPM5pinf58z19GEnSWUbKv4TrhOnquTNgTQWf2AR7EtXDQtX8sdGlaPhpYTC_WdRuXr7oRJ_n76G1LTXOXxBLkVZcKnpVOsZXU8irvuCWYarhRZ5PbD-VRV8blwZcpOwAKbo");'></div>
+</div>
+<h1 class="text-background-dark text-3xl font-bold tracking-tight">Iron Haven Gym</h1>
+<div class="flex flex-col items-center">
+<p class="text-background-dark/70 text-sm font-semibold tracking-widest uppercase">Booking ID: #OK-88291</p>
+<div class="flex items-center gap-2 mt-2 bg-background-dark text-primary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+</span>
+                    Active Session
+                </div>
+</div>
+</div>
+</div>
+<!-- QR Code Section -->
+<div class="px-6 -mt-8">
+<div class="bg-white p-6 rounded-3xl shadow-2xl flex flex-col items-center">
+<div class="w-full aspect-square bg-white flex items-center justify-center mb-4">
+<!-- QR Code Representation -->
+<div class="w-full h-full bg-center bg-no-repeat bg-contain" data-alt="High resolution QR code for gym entrance scanning" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAum6uV7dsusD1gRy_lVEEWlTQHH38hIPPsMUqiwPROqySx0XsSFO9M6_bqRXpt6eIXF1YxbMan7wF-FOP3ydrhgsPcVkdWsIAqPm_xndkYpleytwQgZGG6IkcrLB8VFM_42GzBT6Zf12Piwmx0LP0gbjbfz5J5gTM9qg-HZNT60csLmpyqqoMLZZ_Szzb_gY5tHme0ScZIe3ui8I_MqRWs7faNlKktkiZq0tqwRIFAv6KRAEbd7mDtkre6KWaIAZbxl1CWkk_v1xqW");'></div>
+</div>
+<div class="flex flex-col items-center gap-1">
+<p class="text-background-dark text-sm font-bold uppercase tracking-widest">Scan at Entrance</p>
+<p class="text-gray-400 text-xs font-normal">Show this to the scanner at the front desk</p>
+</div>
+</div>
+</div>
+<!-- Details List -->
+<div class="p-6 mt-4">
+<div class="bg-background-dark/50 dark:bg-white/5 rounded-3xl p-6 border border-white/10">
+<div class="flex justify-between items-center py-4 border-b border-white/10">
+<div class="flex flex-col">
+<p class="text-white/50 text-xs font-medium uppercase tracking-wider">Date</p>
+<p class="text-white text-base font-semibold mt-1">Monday, Oct 24</p>
+</div>
+<span class="material-symbols-outlined text-primary/40">calendar_today</span>
+</div>
+<div class="flex justify-between items-center py-4 border-b border-white/10">
+<div class="flex flex-col">
+<p class="text-white/50 text-xs font-medium uppercase tracking-wider">Time Slot</p>
+<p class="text-white text-base font-semibold mt-1">08:00 AM - 09:30 AM</p>
+</div>
+<span class="material-symbols-outlined text-primary/40">schedule</span>
+</div>
+<div class="flex justify-between items-center py-4 border-b border-white/10">
+<div class="flex flex-col">
+<p class="text-white/50 text-xs font-medium uppercase tracking-wider">Equipment Reserved</p>
+<p class="text-white text-base font-semibold mt-1">Treadmill - Station 04</p>
+</div>
+<span class="material-symbols-outlined text-primary/40">fitness_center</span>
+</div>
+<div class="flex flex-col py-4">
+<p class="text-white/50 text-xs font-medium uppercase tracking-wider">Location</p>
+<div class="flex justify-between items-end mt-1">
+<p class="text-white text-base font-semibold flex-1 pr-4">72nd Street, Manhattan, NY 10023</p>
+<a class="text-primary text-sm font-bold flex items-center gap-1 hover:underline" href="#">
+                        Get Directions
+                        <span class="material-symbols-outlined text-sm">open_in_new</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer Action -->
+<div class="p-6 pt-0 pb-12">
+<button class="w-full bg-white/10 hover:bg-white/20 text-white font-bold py-4 rounded-xl transition-all border border-white/10 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">download</span>
+            Save to Apple Wallet
+        </button>
+<p class="text-center text-white/30 text-[10px] mt-6 leading-relaxed uppercase tracking-[0.2em]">
+            Authorized by Openkora Sports Tech Inc.
+        </p>
+</div>
+<div class="h-8 bg-background-light dark:bg-background-dark"></div>
+</body></html>

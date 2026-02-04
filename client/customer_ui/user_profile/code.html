@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Openkora User Profile</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#DFFF00", // Lime-Yellow Accent
+                        "background-dark": "#050505", // Deep Black
+                        "surface-dark": "#121212",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "1rem",
+                        "2xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer base {
+            body {
+                font-family: 'Lexend', sans-serif;
+                -webkit-tap-highlight-color: transparent;
+                @apply bg-background-dark text-white;
+            }
+            .material-symbols-outlined {
+                font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            }
+            .fill-icon {
+                font-variation-settings: 'FILL' 1, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            }
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="min-h-screen">
+<div class="max-w-md mx-auto min-h-screen flex flex-col relative overflow-x-hidden pb-24">
+<header class="flex items-center p-4 pb-2 sticky top-0 z-30 bg-background-dark/80 backdrop-blur-md">
+<div class="text-white flex size-12 shrink-0 items-center justify-center cursor-pointer active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-2xl">arrow_back_ios_new</span>
+</div>
+<h2 class="text-white text-lg font-medium leading-tight tracking-tight flex-1 text-center pr-12">Profile</h2>
+</header>
+<div class="flex px-6 pt-4 pb-8">
+<div class="flex w-full flex-col gap-6 items-center">
+<div class="relative">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full min-h-32 w-32 border-[3px] border-primary shadow-[0_0_20px_rgba(223,255,0,0.15)]" data-alt="Athletic man smiling in gym gear" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDY9LvDADkLiTEWuQApTWPl1JZWQDoRG4d3GXssGpNQt1ShNwl6ImdW2UVGsW-SkAqH1jQwQ95wQOsIW-DSU1CsOZuapsV3JTdIl2Ics26GikgenYDgBV2QIEHE9FFsnlgUKc5pyohLmqWnAS7KzQKKGem6qM_JMUVWtljFOKl43wisgKg2epbGxTdQTqgiYAyqu2Ya5cCDSHGJsuX7R3tB3Kg99aNfDKJ4Zow02yWrrrJiJrHffIGZIKhzui04LAGHi8tqhms4krHm");'>
+</div>
+<div class="absolute bottom-1 right-1 bg-primary text-black rounded-full p-1.5 border-4 border-background-dark flex items-center justify-center">
+<span class="material-symbols-outlined text-[14px] font-bold fill-icon">verified</span>
+</div>
+</div>
+<div class="flex flex-col items-center justify-center text-center">
+<h1 class="text-white text-3xl font-bold leading-tight tracking-tight">Alex Johnson</h1>
+<div class="mt-2 px-4 py-1.5 bg-white/5 border border-white/10 rounded-full">
+<p class="text-zinc-400 text-[10px] font-medium uppercase tracking-[0.1em]">Gold Member since 2023</p>
+</div>
+</div>
+</div>
+</div>
+<main class="flex-1 px-5 space-y-3">
+<div class="flex items-center gap-4 bg-surface-dark border border-white/[0.03] hover:border-primary/20 transition-all rounded-2xl px-5 min-h-[72px] justify-between cursor-pointer group">
+<div class="flex items-center gap-4">
+<div class="flex items-center justify-center rounded-xl bg-primary/5 shrink-0 size-11" data-icon="Calendar">
+<span class="material-symbols-outlined text-primary text-2xl">calendar_today</span>
+</div>
+<p class="text-white/90 text-[15px] font-medium leading-normal flex-1">My Bookings</p>
+</div>
+<div class="shrink-0">
+<div class="text-zinc-600 group-hover:text-primary transition-colors flex size-7 items-center justify-center">
+<span class="material-symbols-outlined text-xl">chevron_right</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-4 bg-surface-dark border border-white/[0.03] hover:border-primary/20 transition-all rounded-2xl px-5 min-h-[72px] justify-between cursor-pointer group">
+<div class="flex items-center gap-4">
+<div class="flex items-center justify-center rounded-xl bg-primary/5 shrink-0 size-11" data-icon="Heart">
+<span class="material-symbols-outlined text-primary text-2xl">favorite</span>
+</div>
+<p class="text-white/90 text-[15px] font-medium leading-normal flex-1">Saved Gyms</p>
+</div>
+<div class="shrink-0">
+<div class="text-zinc-600 group-hover:text-primary transition-colors flex size-7 items-center justify-center">
+<span class="material-symbols-outlined text-xl">chevron_right</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-4 bg-surface-dark border border-white/[0.03] hover:border-primary/20 transition-all rounded-2xl px-5 min-h-[72px] justify-between cursor-pointer group">
+<div class="flex items-center gap-4">
+<div class="flex items-center justify-center rounded-xl bg-primary/5 shrink-0 size-11" data-icon="CreditCard">
+<span class="material-symbols-outlined text-primary text-2xl">credit_card</span>
+</div>
+<p class="text-white/90 text-[15px] font-medium leading-normal flex-1">Payment Methods</p>
+</div>
+<div class="shrink-0">
+<div class="text-zinc-600 group-hover:text-primary transition-colors flex size-7 items-center justify-center">
+<span class="material-symbols-outlined text-xl">chevron_right</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-4 bg-surface-dark border border-white/[0.03] hover:border-primary/20 transition-all rounded-2xl px-5 min-h-[72px] justify-between cursor-pointer group">
+<div class="flex items-center gap-4">
+<div class="flex items-center justify-center rounded-xl bg-primary/5 shrink-0 size-11" data-icon="Help">
+<span class="material-symbols-outlined text-primary text-2xl">help_outline</span>
+</div>
+<p class="text-white/90 text-[15px] font-medium leading-normal flex-1">Help &amp; Support</p>
+</div>
+<div class="shrink-0">
+<div class="text-zinc-600 group-hover:text-primary transition-colors flex size-7 items-center justify-center">
+<span class="material-symbols-outlined text-xl">chevron_right</span>
+</div>
+</div>
+</div>
+<div class="pt-6">
+<div class="flex items-center gap-4 bg-primary/5 hover:bg-primary/10 border border-primary/20 transition-all rounded-2xl px-5 min-h-[72px] justify-between cursor-pointer group">
+<div class="flex items-center gap-4">
+<div class="text-primary flex items-center justify-center rounded-xl bg-primary/10 shrink-0 size-11">
+<span class="material-symbols-outlined text-2xl">logout</span>
+</div>
+<p class="text-primary text-[15px] font-semibold leading-normal flex-1">Logout</p>
+</div>
+</div>
+</div>
+</main>
+<footer class="p-10 flex flex-col items-center justify-center gap-1.5 opacity-30">
+<p class="text-zinc-400 text-[11px] font-medium">Openkora App v1.4.2</p>
+<p class="text-zinc-500 text-[9px] uppercase tracking-[0.2em]">© 2024 Openkora Inc.</p>
+</footer>
+<nav class="fixed bottom-0 left-0 right-0 bg-background-dark/90 backdrop-blur-xl border-t border-white/5 px-8 py-4 pb-8 flex justify-between items-center z-40">
+<div class="flex flex-col items-center gap-1.5 opacity-40 cursor-pointer">
+<span class="material-symbols-outlined text-white text-2xl">home</span>
+<span class="text-[10px] font-medium text-white tracking-wide">Home</span>
+</div>
+<div class="flex flex-col items-center gap-1.5 opacity-40 cursor-pointer">
+<span class="material-symbols-outlined text-white text-2xl">explore</span>
+<span class="text-[10px] font-medium text-white tracking-wide">Explore</span>
+</div>
+<div class="flex flex-col items-center gap-1.5 opacity-40 cursor-pointer">
+<span class="material-symbols-outlined text-white text-2xl">timer</span>
+<span class="text-[10px] font-medium text-white tracking-wide">Workout</span>
+</div>
+<div class="flex flex-col items-center gap-1.5 cursor-pointer">
+<span class="material-symbols-outlined text-primary text-2xl fill-icon">person</span>
+<span class="text-[10px] font-bold text-primary tracking-wide">Profile</span>
+</div>
+</nav>
+</div>
+
+</body></html>

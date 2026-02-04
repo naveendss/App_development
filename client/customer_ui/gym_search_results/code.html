@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Gym Search Results - Openkora</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f9f506",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#000000",
+                        "card-dark": "#121212",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white min-h-screen">
+<!-- Top App Bar -->
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
+<div class="flex items-center p-4 pb-2 justify-between">
+<div class="flex size-12 shrink-0 items-center justify-start">
+<span class="material-symbols-outlined text-2xl">arrow_back_ios</span>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-tight flex-1 text-center">Openkora</h2>
+<div class="flex w-12 items-center justify-end">
+<button class="flex size-12 cursor-pointer items-center justify-center rounded-full bg-transparent">
+<span class="material-symbols-outlined text-2xl">notifications</span>
+</button>
+</div>
+</div>
+<!-- Search Bar with Yellow Border -->
+<div class="px-4 py-2">
+<label class="flex flex-col min-w-40 h-14 w-full">
+<div class="flex w-full flex-1 items-stretch rounded-full border-2 border-primary bg-background-light dark:bg-card-dark overflow-hidden h-full">
+<div class="flex items-center justify-center pl-4">
+<span class="material-symbols-outlined text-slate-400">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 border-none bg-transparent focus:outline-0 focus:ring-0 h-full placeholder:text-slate-500 text-base font-normal leading-normal px-4" placeholder="Search gyms, equipment..." value=""/>
+</div>
+</label>
+</div>
+<!-- Filter Chips (Horizontal Scroll) -->
+<div class="flex gap-3 px-4 py-3 overflow-x-auto no-scrollbar">
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary px-4">
+<p class="text-background-dark text-sm font-semibold leading-normal">Price: Low to High</p>
+<span class="material-symbols-outlined text-background-dark text-lg">expand_more</span>
+</button>
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-slate-200 dark:bg-card-dark px-4">
+<p class="text-sm font-medium leading-normal">Rating 4.5+</p>
+<span class="material-symbols-outlined text-lg">expand_more</span>
+</button>
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-slate-200 dark:bg-card-dark px-4">
+<p class="text-sm font-medium leading-normal">Open Now</p>
+<span class="material-symbols-outlined text-lg">expand_more</span>
+</button>
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-full bg-slate-200 dark:bg-card-dark px-4">
+<p class="text-sm font-medium leading-normal">Equipment: Treadmill</p>
+<span class="material-symbols-outlined text-lg">expand_more</span>
+</button>
+</div>
+</header>
+<!-- Main Results List -->
+<main class="px-4 pb-24">
+<!-- Result Card 1 -->
+<div class="mb-6 @container">
+<div class="flex flex-col items-stretch justify-start rounded-xl overflow-hidden shadow-lg bg-white dark:bg-card-dark">
+<div class="relative w-full aspect-[16/10] bg-center bg-no-repeat bg-cover" data-alt="Interior of a modern high-end gym with heavy weights" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC8XrbRRZAe3-GY42YCKWyMaElNCUzLZt-NpBNUMMfXgqTVgo8fU5cvjPBwhKCvUDGvzYAAIpe4mGoCyxWc1kgo9NHeviD3nsRwdjCwVDObQsLhAZr-92GqdUfKPkgulOAKuvAKM8qMXTsTemxUA3FSkZnVekSXw2bGNKeVigfxoc8GZGKvA1Yu72GRgyocLYt02-UxbZTAjgovaINVp9zsvWWB_32DsbWjMRbFUKqZPTmCPwoieFJGYFf8TEju_agsNkQ7UDibOUZd");'>
+<div class="absolute top-4 right-4 bg-black/60 backdrop-blur-sm text-white text-xs font-bold px-3 py-1.5 rounded-full">
+                        0.5 mi away
+                    </div>
+</div>
+<div class="flex w-full grow flex-col items-stretch justify-center gap-2 p-5">
+<div class="flex justify-between items-start">
+<div>
+<p class="text-primary text-xs font-bold uppercase tracking-widest mb-1">Open Now</p>
+<p class="text-lg font-bold leading-tight tracking-tight">Iron Haven Gym</p>
+</div>
+<div class="flex items-center gap-1 bg-primary/10 px-2 py-1 rounded-lg">
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1">star</span>
+<p class="text-primary text-sm font-bold">4.9</p>
+</div>
+</div>
+<div class="flex items-end gap-3 justify-between mt-2">
+<div class="flex flex-col">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Over 50+ Power racks</p>
+<p class="text-lg font-bold text-slate-900 dark:text-white">$10<span class="text-sm font-normal text-slate-500">/Day Pass</span></p>
+</div>
+<button class="flex min-w-[100px] cursor-pointer items-center justify-center rounded-full h-10 px-5 bg-primary text-background-dark text-sm font-bold shadow-md active:scale-95 transition-transform">
+                            Book Now
+                        </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Result Card 2 -->
+<div class="mb-6 @container">
+<div class="flex flex-col items-stretch justify-start rounded-xl overflow-hidden shadow-lg bg-white dark:bg-card-dark">
+<div class="relative w-full aspect-[16/10] bg-center bg-no-repeat bg-cover" data-alt="Modern fitness center with cardio equipment and neon lights" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD8Y95Xd9SA5VB86MuS40IqSfs8VhLTkkpE2qDX4i2ad6G7eiZRUACRsmu6WZVWXeQDU1YAHDKFOGQF9nSNlem54TZFOEbjOCUzWOLW08vWajYgHnAl6AvLZZM5eyKVC4CewrVtuRhAjE5aw6X0PKeBDx9WkHcF28YXj8JZFBVe_duZHN2NhmYXnH9C45_n-7GR0uoRmJI4-U1xAzt7srX39LoSp3QVV4jFsGBzqCoRjBuxSFioAvcCphOXJ-QW_ei6wWv8W52dVaYN");'>
+<div class="absolute top-4 right-4 bg-black/60 backdrop-blur-sm text-white text-xs font-bold px-3 py-1.5 rounded-full">
+                        1.2 mi away
+                    </div>
+</div>
+<div class="flex w-full grow flex-col items-stretch justify-center gap-2 p-5">
+<div class="flex justify-between items-start">
+<div>
+<p class="text-slate-500 dark:text-slate-400 text-xs font-bold uppercase tracking-widest mb-1">Busiest at 6PM</p>
+<p class="text-lg font-bold leading-tight tracking-tight">Power Lift Center</p>
+</div>
+<div class="flex items-center gap-1 bg-primary/10 px-2 py-1 rounded-lg">
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1">star</span>
+<p class="text-primary text-sm font-bold">4.7</p>
+</div>
+</div>
+<div class="flex items-end gap-3 justify-between mt-2">
+<div class="flex flex-col">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Crossfit &amp; HIIT zone</p>
+<p class="text-lg font-bold text-slate-900 dark:text-white">$15<span class="text-sm font-normal text-slate-500">/Day Pass</span></p>
+</div>
+<button class="flex min-w-[100px] cursor-pointer items-center justify-center rounded-full h-10 px-5 bg-primary text-background-dark text-sm font-bold shadow-md active:scale-95 transition-transform">
+                            Book Now
+                        </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Result Card 3 -->
+<div class="mb-6 @container">
+<div class="flex flex-col items-stretch justify-start rounded-xl overflow-hidden shadow-lg bg-white dark:bg-card-dark">
+<div class="relative w-full aspect-[16/10] bg-center bg-no-repeat bg-cover" data-alt="A clean pilates and yoga studio with wooden floors" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD1fTo2tEli_5KVCvP_Cs4rSgro2ZoVAo9mN2exQIL28omSyoI8K8Pc2qHu_hAHcRFcfO-3UBXUEPcNj5xHQiV7-2n4kLVMNKybHQOzLYhSZCcG4ZtBSVb-KprMf29twd5Y7JT-F4pLowA9PIQ4RbQcB_ORRi1XppYRhNwfGX8Ct4fEFgYMv6ASCivvbI0OFuvrFYeSbOITh-Rq2O2BYv-8EAUFktWVPVROa_xKF-MOJbXMLNTvAKbkUmtn4B2sxtwMtU3gPMKq9kRC");'>
+<div class="absolute top-4 right-4 bg-black/60 backdrop-blur-sm text-white text-xs font-bold px-3 py-1.5 rounded-full">
+                        2.4 mi away
+                    </div>
+</div>
+<div class="flex w-full grow flex-col items-stretch justify-center gap-2 p-5">
+<div class="flex justify-between items-start">
+<div>
+<p class="text-primary text-xs font-bold uppercase tracking-widest mb-1">Closing Soon</p>
+<p class="text-lg font-bold leading-tight tracking-tight">Zenith Wellness</p>
+</div>
+<div class="flex items-center gap-1 bg-primary/10 px-2 py-1 rounded-lg">
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1">star</span>
+<p class="text-primary text-sm font-bold">4.8</p>
+</div>
+</div>
+<div class="flex items-end gap-3 justify-between mt-2">
+<div class="flex flex-col">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Yoga, Pilates, Pool</p>
+<p class="text-lg font-bold text-slate-900 dark:text-white">$25<span class="text-sm font-normal text-slate-500">/Day Pass</span></p>
+</div>
+<button class="flex min-w-[100px] cursor-pointer items-center justify-center rounded-full h-10 px-5 bg-primary text-background-dark text-sm font-bold shadow-md active:scale-95 transition-transform">
+                            Book Now
+                        </button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Floating Filter Button -->
+<div class="fixed bottom-24 right-6">
+<button class="flex size-14 items-center justify-center rounded-full bg-primary text-background-dark shadow-2xl active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-3xl">tune</span>
+</button>
+</div>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 w-full bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-lg border-t border-slate-200 dark:border-slate-800 px-6 py-3">
+<div class="flex justify-between items-center max-w-md mx-auto">
+<button class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">search</span>
+<span class="text-[10px] font-bold">Search</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined">event_available</span>
+<span class="text-[10px] font-medium">Bookings</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined">favorite</span>
+<span class="text-[10px] font-medium">Saved</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-slate-400">
+<span class="material-symbols-outlined">account_circle</span>
+<span class="text-[10px] font-medium">Profile</span>
+</button>
+</div>
+</nav>
+</body></html>

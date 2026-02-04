@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Vendor Home &amp; Scan</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;family=Noto+Sans:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f9f506",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#000000",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white min-h-screen">
+<div class="max-w-md mx-auto min-h-screen flex flex-col pb-24">
+<!-- TopAppBar -->
+<header class="sticky top-0 z-50 bg-background-light dark:bg-background-dark flex items-center p-4 justify-between border-b border-white/5">
+<div class="flex items-center gap-3">
+<div class="flex size-10 shrink-0 items-center justify-center rounded-lg bg-white/5">
+<span class="material-symbols-outlined text-white">menu</span>
+</div>
+<h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">Iron Paradise Gym</h2>
+</div>
+<div class="flex items-center justify-end">
+<button class="relative flex items-center justify-center rounded-lg h-10 w-10 bg-transparent text-white">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2 flex h-2 w-2 rounded-full bg-primary"></span>
+</button>
+</div>
+</header>
+<!-- Main Hero Scan Button -->
+<div class="px-4 py-6">
+<button class="flex w-full items-center justify-center overflow-hidden rounded-xl h-20 px-5 bg-primary text-background-dark gap-3 shadow-[0_0_20px_rgba(249,245,6,0.3)] hover:opacity-90 transition-all active:scale-[0.98]">
+<span class="material-symbols-outlined text-3xl font-bold">qr_code_scanner</span>
+<span class="text-xl font-extrabold leading-normal tracking-tight">Scan QR Code</span>
+</button>
+</div>
+<!-- SectionHeader: Summary -->
+<div class="flex items-center justify-between px-4 pb-2">
+<h3 class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">Today's Summary</h3>
+<span class="text-primary text-xs font-semibold px-2 py-1 rounded bg-primary/10 border border-primary/20 uppercase tracking-wider">Live</span>
+</div>
+<!-- Stats Grid -->
+<div class="flex flex-wrap gap-3 p-4">
+<div class="flex min-w-[140px] flex-1 flex-col gap-2 rounded-xl p-5 bg-zinc-900 border border-white/5">
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-primary text-lg">how_to_reg</span>
+<p class="text-zinc-400 text-xs font-medium leading-normal uppercase">Check-ins</p>
+</div>
+<p class="text-white tracking-tight text-3xl font-bold leading-tight">42</p>
+</div>
+<div class="flex min-w-[140px] flex-1 flex-col gap-2 rounded-xl p-5 bg-zinc-900 border border-white/5">
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-primary text-lg">event_seat</span>
+<p class="text-zinc-400 text-xs font-medium leading-normal uppercase">Active Slots</p>
+</div>
+<p class="text-white tracking-tight text-3xl font-bold leading-tight">12/20</p>
+</div>
+<div class="w-full flex flex-col gap-2 rounded-xl p-5 bg-zinc-900 border border-white/5">
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-primary text-lg">payments</span>
+<p class="text-zinc-400 text-xs font-medium leading-normal uppercase">Daily Revenue</p>
+</div>
+<p class="text-white tracking-tight text-3xl font-bold leading-tight">$1,240.00</p>
+</div>
+</div>
+<!-- SectionHeader: Upcoming -->
+<div class="flex items-center justify-between px-4 pb-4 pt-6">
+<h3 class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">Upcoming Bookings</h3>
+<button class="text-primary text-sm font-medium">View All</button>
+</div>
+<!-- Upcoming Bookings Horizontal List -->
+<div class="flex overflow-x-auto gap-4 px-4 pb-6 scrollbar-hide no-scrollbar">
+<!-- Booking Card 1 -->
+<div class="flex-none w-64 p-4 rounded-xl bg-zinc-900 border border-white/5">
+<div class="flex items-center gap-3 mb-4">
+<img alt="Member Avatar" class="size-10 rounded-full bg-zinc-800" data-alt="Portrait of a young male gym member" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC20WBhOaiut0h79DoDFwWpPIsLv0BgNocL4DTxO0ozbKqElRdsndYlA7S2VINXa47nr72LjbUF51yY5PUlsFVYq4heJ08PY6ffKC39OwOYkM2ouPQIP1QW96b363f4oADfT-vO0hih5SZLWX3OIwCUgTNEFOHEaXfVeqI1J2aN4iBPr2gU5qB42JsFS_c4-1IuWkB8rx9IlxHMccgUqhTYTdLcvUGQ3npy7-31wCZEbUmL-rfCAusJy3bIFQ31IHfyQYOZ72A_X797"/>
+<div>
+<p class="text-white font-bold text-sm">Alex Rivera</p>
+<p class="text-zinc-400 text-xs font-medium">Powerlifting Pro</p>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-2 text-zinc-300">
+<span class="material-symbols-outlined text-sm">schedule</span>
+<span class="text-xs">10:00 AM - 11:30 AM</span>
+</div>
+<div class="flex items-center gap-2 text-zinc-300">
+<span class="material-symbols-outlined text-sm">fitness_center</span>
+<span class="text-xs">Squat Rack #2</span>
+</div>
+</div>
+<button class="mt-4 w-full py-2 bg-white/5 hover:bg-white/10 text-white text-xs font-bold rounded-lg border border-white/10">Manage</button>
+</div>
+<!-- Booking Card 2 -->
+<div class="flex-none w-64 p-4 rounded-xl bg-zinc-900 border border-white/5">
+<div class="flex items-center gap-3 mb-4">
+<img alt="Member Avatar" class="size-10 rounded-full bg-zinc-800" data-alt="Portrait of a female gym member" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSRygx1T1ss7w_oiC9-RZHR3bnRP29b1YuB2IwQKrYhlz1pmB11QHktGMT6WjBlHxL6vqE5L3jdZ9WoxnNsBxZ2wFdC0J7JUuylIrC4HnLoPAq56CrBqY2zAOOfTaz4jyLBkG0oJbdwcE8fvnelLnfxwKSrNY6z55XFLozK_hgAv_WgYoqbm3ba_3KTDw-O778OaRKEssy7eLIYhbOCeo8IfQNVpWjpjxETpBlTvTW-9abIjkpLuFT3WfnMnLDQOy8KIv1eW4Zhjvx"/>
+<div>
+<p class="text-white font-bold text-sm">Sarah Jenkins</p>
+<p class="text-zinc-400 text-xs font-medium">Cardio Master</p>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-2 text-zinc-300">
+<span class="material-symbols-outlined text-sm">schedule</span>
+<span class="text-xs">11:45 AM - 01:00 PM</span>
+</div>
+<div class="flex items-center gap-2 text-zinc-300">
+<span class="material-symbols-outlined text-sm">fitness_center</span>
+<span class="text-xs">Treadmill #04</span>
+</div>
+</div>
+<button class="mt-4 w-full py-2 bg-white/5 hover:bg-white/10 text-white text-xs font-bold rounded-lg border border-white/10">Manage</button>
+</div>
+<!-- Booking Card 3 -->
+<div class="flex-none w-64 p-4 rounded-xl bg-zinc-900 border border-white/5">
+<div class="flex items-center gap-3 mb-4">
+<div class="size-10 rounded-full bg-zinc-800 flex items-center justify-center">
+<span class="material-symbols-outlined text-zinc-500">person</span>
+</div>
+<div>
+<p class="text-white font-bold text-sm">Marcus Chen</p>
+<p class="text-zinc-400 text-xs font-medium">Day Pass</p>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-2 text-zinc-300">
+<span class="material-symbols-outlined text-sm">schedule</span>
+<span class="text-xs">01:30 PM - 03:00 PM</span>
+</div>
+<div class="flex items-center gap-2 text-zinc-300">
+<span class="material-symbols-outlined text-sm">fitness_center</span>
+<span class="text-xs">Main Floor</span>
+</div>
+</div>
+<button class="mt-4 w-full py-2 bg-white/5 hover:bg-white/10 text-white text-xs font-bold rounded-lg border border-white/10">Manage</button>
+</div>
+</div>
+<!-- Sticky Bottom Nav (iOS style) -->
+<nav class="fixed bottom-0 left-0 right-0 max-w-md mx-auto bg-zinc-900/90 backdrop-blur-xl border-t border-white/10 flex justify-around items-center px-4 py-3 pb-8">
+<button class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined fill-1">grid_view</span>
+<span class="text-[10px] font-bold">Dashboard</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-zinc-500">
+<span class="material-symbols-outlined">group</span>
+<span class="text-[10px] font-bold">Members</span>
+</button>
+<div class="relative -top-6">
+<button class="size-14 rounded-full bg-primary flex items-center justify-center shadow-lg shadow-primary/20 border-4 border-background-dark">
+<span class="material-symbols-outlined text-background-dark text-3xl font-bold">camera</span>
+</button>
+</div>
+<button class="flex flex-col items-center gap-1 text-zinc-500">
+<span class="material-symbols-outlined">analytics</span>
+<span class="text-[10px] font-bold">Stats</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-zinc-500">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-[10px] font-bold">Settings</span>
+</button>
+</nav>
+</div>
+<style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .fill-1 {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+</body></html>

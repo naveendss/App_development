@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Openkora - Slot Selection</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#D4E93E",
+                        "background-dark": "#000000",
+                        "card-dark": "#121212",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "1rem",
+                        "2xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        :root {
+            --primary-color: #D4E93E;
+        }
+        body {
+            font-family: 'Lexend', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .custom-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-dark text-white min-h-screen flex flex-col">
+<header class="sticky top-0 z-50 bg-background-dark/80 backdrop-blur-md border-b border-white/5">
+<div class="flex items-center px-4 h-16 justify-between">
+<div class="flex items-center gap-4">
+<button class="flex items-center justify-center size-10 rounded-full hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-2xl">arrow_back_ios_new</span>
+</button>
+<h2 class="text-lg font-bold tracking-tight">Select Time Slot</h2>
+</div>
+<button class="flex items-center justify-center size-10">
+<span class="material-symbols-outlined text-2xl text-[var(--primary-color)]">info</span>
+</button>
+</div>
+</header>
+<main class="flex-1 pb-36">
+<div class="py-6 overflow-hidden">
+<div class="px-6 flex justify-between items-center mb-4">
+<h3 class="text-xs font-bold uppercase tracking-widest text-white/50">October 2023</h3>
+<span class="material-symbols-outlined text-[var(--primary-color)]">calendar_month</span>
+</div>
+<div class="flex gap-3 px-6 overflow-x-auto custom-scrollbar">
+<button class="flex flex-col items-center justify-center min-w-[68px] h-24 rounded-2xl bg-white/5 border border-white/5">
+<span class="text-[10px] font-medium text-white/40 uppercase mb-1">Mon</span>
+<span class="text-xl font-bold">2</span>
+</button>
+<button class="flex flex-col items-center justify-center min-w-[68px] h-24 rounded-2xl bg-white/5 border border-white/5">
+<span class="text-[10px] font-medium text-white/40 uppercase mb-1">Tue</span>
+<span class="text-xl font-bold">3</span>
+</button>
+<button class="flex flex-col items-center justify-center min-w-[68px] h-24 rounded-2xl bg-white/5 border border-white/5">
+<span class="text-[10px] font-medium text-white/40 uppercase mb-1">Wed</span>
+<span class="text-xl font-bold">4</span>
+</button>
+<button class="flex flex-col items-center justify-center min-w-[68px] h-24 rounded-2xl bg-[var(--primary-color)] text-black shadow-lg shadow-[var(--primary-color)]/20">
+<span class="text-[10px] font-black uppercase mb-1">Thu</span>
+<span class="text-2xl font-black">5</span>
+</button>
+<button class="flex flex-col items-center justify-center min-w-[68px] h-24 rounded-2xl bg-white/5 border border-white/5">
+<span class="text-[10px] font-medium text-white/40 uppercase mb-1">Fri</span>
+<span class="text-xl font-bold">6</span>
+</button>
+<button class="flex flex-col items-center justify-center min-w-[68px] h-24 rounded-2xl bg-white/5 border border-white/5">
+<span class="text-[10px] font-medium text-white/40 uppercase mb-1">Sat</span>
+<span class="text-xl font-bold">7</span>
+</button>
+</div>
+</div>
+<div class="px-6 flex gap-6 mb-8">
+<div class="flex items-center gap-2">
+<div class="size-2 rounded-full border-2 border-[var(--primary-color)]"></div>
+<span class="text-[11px] font-bold uppercase tracking-wider text-white/60">Available</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="size-2 rounded-full bg-white/20"></div>
+<span class="text-[11px] font-bold uppercase tracking-wider text-white/60">Booked</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="size-2 rounded-full bg-[var(--primary-color)]"></div>
+<span class="text-[11px] font-bold uppercase tracking-wider text-white/60">Selected</span>
+</div>
+</div>
+<div class="px-6 pb-4">
+<h3 class="text-lg font-bold tracking-tight">Morning Slots</h3>
+</div>
+<div class="grid grid-cols-2 gap-3 px-6">
+<button class="relative group flex flex-col items-start p-4 rounded-2xl border-2 border-[var(--primary-color)]/20 bg-white/5 transition-all">
+<div class="flex w-full justify-between items-start mb-1">
+<span class="text-sm font-bold">08:00 AM</span>
+<span class="material-symbols-outlined text-[var(--primary-color)] text-xl">radio_button_unchecked</span>
+</div>
+<span class="text-[10px] uppercase font-bold text-[var(--primary-color)] tracking-widest">Available</span>
+</button>
+<button class="relative flex flex-col items-start p-4 rounded-2xl bg-white/5 border-2 border-transparent opacity-30 cursor-not-allowed" disabled="">
+<div class="flex w-full justify-between items-start mb-1">
+<span class="text-sm font-bold">09:00 AM</span>
+<span class="material-symbols-outlined text-white/40 text-xl">block</span>
+</div>
+<span class="text-[10px] uppercase font-bold text-white/40 tracking-widest">Full</span>
+</button>
+<button class="relative group flex flex-col items-start p-4 rounded-2xl border-2 border-[var(--primary-color)]/20 bg-white/5 transition-all">
+<div class="flex w-full justify-between items-start mb-1">
+<span class="text-sm font-bold">10:00 AM</span>
+<span class="material-symbols-outlined text-[var(--primary-color)] text-xl">radio_button_unchecked</span>
+</div>
+<span class="text-[10px] uppercase font-bold text-[var(--primary-color)] tracking-widest">Available</span>
+</button>
+<button class="relative group flex flex-col items-start p-4 rounded-2xl border-2 border-[var(--primary-color)]/20 bg-white/5 transition-all">
+<div class="flex w-full justify-between items-start mb-1">
+<span class="text-sm font-bold">11:00 AM</span>
+<span class="material-symbols-outlined text-[var(--primary-color)] text-xl">radio_button_unchecked</span>
+</div>
+<span class="text-[10px] uppercase font-bold text-[var(--primary-color)] tracking-widest">Available</span>
+</button>
+</div>
+<div class="px-6 pt-8 pb-4">
+<h3 class="text-lg font-bold tracking-tight">Afternoon Slots</h3>
+</div>
+<div class="grid grid-cols-2 gap-3 px-6">
+<button class="relative flex flex-col items-start p-4 rounded-2xl border-2 border-[var(--primary-color)] bg-[var(--primary-color)] text-black shadow-lg shadow-[var(--primary-color)]/20">
+<div class="flex w-full justify-between items-start mb-1">
+<span class="text-sm font-black">12:00 PM</span>
+<span class="material-symbols-outlined text-xl font-bold">check_circle</span>
+</div>
+<span class="text-[10px] uppercase font-black tracking-widest">Selected</span>
+</button>
+<button class="relative flex flex-col items-start p-4 rounded-2xl bg-white/5 border-2 border-transparent opacity-30 cursor-not-allowed" disabled="">
+<div class="flex w-full justify-between items-start mb-1">
+<span class="text-sm font-bold">01:00 PM</span>
+<span class="material-symbols-outlined text-white/40 text-xl">block</span>
+</div>
+<span class="text-[10px] uppercase font-bold text-white/40 tracking-widest">Full</span>
+</button>
+<button class="relative group flex flex-col items-start p-4 rounded-2xl border-2 border-[var(--primary-color)]/20 bg-white/5 transition-all">
+<div class="flex w-full justify-between items-start mb-1">
+<span class="text-sm font-bold">02:00 PM</span>
+<span class="material-symbols-outlined text-[var(--primary-color)] text-xl">radio_button_unchecked</span>
+</div>
+<span class="text-[10px] uppercase font-bold text-[var(--primary-color)] tracking-widest">Available</span>
+</button>
+<button class="relative group flex flex-col items-start p-4 rounded-2xl border-2 border-[var(--primary-color)]/20 bg-white/5 transition-all">
+<div class="flex w-full justify-between items-start mb-1">
+<span class="text-sm font-bold">03:00 PM</span>
+<span class="material-symbols-outlined text-[var(--primary-color)] text-xl">radio_button_unchecked</span>
+</div>
+<span class="text-[10px] uppercase font-bold text-[var(--primary-color)] tracking-widest">Available</span>
+</button>
+</div>
+</main>
+<footer class="fixed bottom-0 left-0 right-0 z-50 bg-background-dark/95 border-t border-white/5 px-6 pt-5 pb-10 backdrop-blur-xl">
+<div class="max-w-md mx-auto flex items-center justify-between gap-6">
+<div class="flex flex-col">
+<p class="text-[10px] uppercase tracking-widest font-black text-white/50 mb-0.5">Total Pay</p>
+<div class="flex items-baseline gap-1">
+<span class="text-2xl font-black text-white">$25.00</span>
+<span class="text-[10px] text-white/40 font-medium">/ session</span>
+</div>
+</div>
+<button class="flex-1 bg-[var(--primary-color)] text-black h-14 rounded-2xl font-black flex items-center justify-center gap-2 active:scale-[0.97] transition-all shadow-xl shadow-[var(--primary-color)]/20">
+            PROCEED TO PAY
+            <span class="material-symbols-outlined font-bold">arrow_forward</span>
+</button>
+</div>
+</footer>
+
+</body></html>

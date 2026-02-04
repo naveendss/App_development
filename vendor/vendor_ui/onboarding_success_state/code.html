@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Registration Success - Openkora</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f9f506",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#181811",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-white">
+<!-- iOS Status Bar Mockup -->
+<div class="flex items-center justify-between px-8 pt-4 pb-2 w-full">
+<span class="text-sm font-semibold">9:41</span>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px]">signal_cellular_alt</span>
+<span class="material-symbols-outlined text-[18px]">wifi</span>
+<span class="material-symbols-outlined text-[18px]">battery_full</span>
+</div>
+</div>
+<!-- Main Content Container -->
+<div class="relative flex h-[calc(100vh-60px)] w-full flex-col justify-between overflow-x-hidden">
+<!-- Top Empty Space for Centering Balance -->
+<div class="h-10"></div>
+<!-- Success Graphic and Text -->
+<div class="flex flex-col items-center px-6">
+<!-- Glowing Success Icon -->
+<div class="relative mb-10 flex items-center justify-center">
+<!-- Outer Glow Layers -->
+<div class="absolute w-32 h-32 bg-primary/20 rounded-full blur-2xl"></div>
+<div class="absolute w-24 h-24 bg-primary/30 rounded-full blur-xl"></div>
+<!-- Main Checkmark Container -->
+<div class="relative flex h-24 w-24 items-center justify-center rounded-full bg-primary shadow-[0_0_30px_rgba(249,245,6,0.4)]">
+<span class="material-symbols-outlined text-[#181811] text-[54px] font-bold" style="font-variation-settings: 'wght' 700">
+                        check
+                    </span>
+</div>
+</div>
+<!-- Headline -->
+<h1 class="text-white tracking-tight text-[32px] font-bold leading-tight text-center pb-3">
+                Registration Submitted!
+            </h1>
+<!-- Subtext -->
+<p class="text-white/70 text-base font-normal leading-relaxed text-center max-w-[300px]">
+                Your gym is being reviewed and will be live shortly. You can track your status in the dashboard.
+            </p>
+</div>
+<!-- Action Buttons Section -->
+<div class="flex flex-col items-stretch px-6 pb-12 gap-4">
+<!-- Primary Action -->
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-14 px-5 bg-primary text-[#181811] text-base font-bold leading-normal tracking-wide w-full shadow-lg active:scale-[0.98] transition-transform">
+<span class="truncate">Go to Dashboard</span>
+</button>
+<!-- Secondary Action -->
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-14 px-5 bg-transparent border-2 border-primary/40 text-primary text-base font-bold leading-normal tracking-wide w-full active:bg-primary/5 active:scale-[0.98] transition-all">
+<span class="truncate">Preview My Listing</span>
+</button>
+<!-- Home Indicator Space (iOS) -->
+<div class="h-6 w-full flex justify-center items-end">
+<div class="w-32 h-1.5 bg-white/20 rounded-full"></div>
+</div>
+</div>
+</div>
+<!-- Decorative Elements (Abstract Patterns) -->
+<div class="fixed top-0 left-0 -z-10 w-full h-full opacity-10 pointer-events-none overflow-hidden">
+<div class="absolute -top-20 -right-20 w-64 h-64 bg-primary/20 rounded-full blur-[100px]"></div>
+<div class="absolute bottom-1/4 -left-20 w-80 h-80 bg-primary/10 rounded-full blur-[120px]"></div>
+</div>
+</body></html>

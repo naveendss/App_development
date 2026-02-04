@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Gym Business Details</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f9f506",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#000000",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Lexend', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .form-input:focus {
+            border-color: #f9f506 !important;
+            box-shadow: 0 0 0 1px #f9f506;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-white min-h-screen flex flex-col">
+<!-- Top Navigation Bar -->
+<header class="flex items-center px-4 pt-6 pb-2 justify-between sticky top-0 bg-background-light dark:bg-background-dark z-10">
+<button class="flex items-center justify-center size-10 rounded-full hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-white">arrow_back_ios_new</span>
+</button>
+<h2 class="text-white text-lg font-bold leading-tight tracking-tight flex-1 text-center pr-10">Business Details</h2>
+</header>
+<main class="flex-1 flex flex-col">
+<!-- Progress Indicators -->
+<div class="flex w-full flex-row items-center justify-center gap-3 py-6">
+<div class="h-1.5 w-8 rounded-full bg-primary/30"></div>
+<div class="h-1.5 w-12 rounded-full bg-primary"></div>
+<div class="h-1.5 w-8 rounded-full bg-white/10"></div>
+<div class="h-1.5 w-8 rounded-full bg-white/10"></div>
+</div>
+<!-- Headline Content -->
+<div class="px-4">
+<h3 class="text-white tracking-tight text-3xl font-bold leading-tight pt-2">Tell us about your gym</h3>
+<p class="text-white/60 text-base font-normal leading-normal pb-6 pt-2">Step 2: Business Information</p>
+</div>
+<!-- Form Fields -->
+<div class="flex flex-col gap-4 px-4 pb-24">
+<!-- Gym Name -->
+<label class="flex flex-col w-full">
+<span class="text-white text-sm font-medium leading-normal pb-2 ml-1">Gym Name</span>
+<input class="form-input w-full rounded-xl text-white border border-white/10 bg-white/5 h-14 placeholder:text-white/30 px-4 text-base font-normal" placeholder="Enter your gym name" type="text" value="Titan Fitness Center"/>
+</label>
+<!-- Full Business Address -->
+<label class="flex flex-col w-full">
+<span class="text-white text-sm font-medium leading-normal pb-2 ml-1">Full Business Address</span>
+<textarea class="form-input w-full rounded-xl text-white border border-white/10 bg-white/5 min-h-[100px] placeholder:text-white/30 p-4 text-base font-normal resize-none" placeholder="Enter the complete address"></textarea>
+</label>
+<!-- Location Picker Widget -->
+<div class="flex flex-col w-full">
+<span class="text-white text-sm font-medium leading-normal pb-2 ml-1">Location on Map</span>
+<div class="relative w-full h-48 rounded-xl overflow-hidden border border-white/10 group cursor-pointer">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Dark stylized map showing city streets" data-location="New York City" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB_keAsY3wpBl2VdcM2WxBFrjS5fuvBfdf9RCSHRpURHi4zOcpYaM4XglpW6dB_m5Q8j-xc02AEj_WYJrjjQkIKu_74Eu54X6nMkRJTwHWpICHYi86Sjomhx1WnzikSUW1FMX_wKJPZUM7dLXZ05rCBZouflR1JMI3VuNa1sGl33gNAuC8SZFV41DfsLCqO6wQIqakfKEUZ0cWVnnetxkwRWXk_22XvBbOZ35gyy85lj1plnWCmXc0NizB314hbOWg7GH8vxfrUa1fG');">
+<div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-colors"></div>
+</div>
+<!-- Lime-Yellow Pin -->
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="relative">
+<span class="material-symbols-outlined text-primary text-5xl drop-shadow-lg scale-110" style="font-variation-settings: 'FILL' 1">location_on</span>
+<div class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-4 h-1 bg-black/40 blur-sm rounded-full"></div>
+</div>
+</div>
+<div class="absolute bottom-3 left-3 right-3">
+<div class="bg-black/80 backdrop-blur-md border border-white/10 rounded-lg px-3 py-2 flex items-center justify-between">
+<span class="text-xs text-white/80 font-medium">Set Precise Location</span>
+<span class="material-symbols-outlined text-primary text-sm">open_in_full</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Business License / Tax ID (Optional) -->
+<label class="flex flex-col w-full mt-2">
+<div class="flex justify-between items-center pb-2 px-1">
+<span class="text-white text-sm font-medium leading-normal">Business License / Tax ID</span>
+<span class="text-white/40 text-xs">Optional</span>
+</div>
+<input class="form-input w-full rounded-xl text-white border border-white/10 bg-white/5 h-14 placeholder:text-white/30 px-4 text-base font-normal" placeholder="Enter ID if available" type="text"/>
+</label>
+</div>
+</main>
+<!-- Bottom Action Area -->
+<div class="fixed bottom-0 left-0 right-0 p-4 pb-8 bg-gradient-to-t from-background-dark via-background-dark/95 to-transparent">
+<button class="w-full bg-primary hover:bg-primary/90 text-black font-bold text-lg py-4 rounded-xl transition-all active:scale-[0.98] shadow-[0_8px_30px_rgb(249,245,6,0.2)]">
+            Next
+        </button>
+</div>
+</body></html>

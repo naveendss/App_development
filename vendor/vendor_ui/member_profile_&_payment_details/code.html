@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Member Profile &amp; Payment Details</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f9f506",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#000000",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Lexend', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-white font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark max-w-[430px] mx-auto overflow-x-hidden border-x border-white/5">
+<div class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between sticky top-0 z-50">
+<div class="text-white flex size-12 shrink-0 items-center cursor-pointer">
+<span class="material-symbols-outlined">arrow_back_ios</span>
+</div>
+<h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Member Profile</h2>
+<div class="flex w-12 items-center justify-end">
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 bg-transparent text-white gap-2 text-base font-bold leading-normal tracking-[0.015em] min-w-0 p-0">
+<span class="material-symbols-outlined">more_horiz</span>
+</button>
+</div>
+</div>
+<div class="flex p-4 @container border-b border-white/10">
+<div class="flex w-full flex-col gap-4 items-center">
+<div class="flex gap-4 flex-col items-center w-full">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full border-4 border-primary/20 min-h-32 w-32 shadow-[0_0_20px_rgba(249,245,6,0.1)]" data-alt="Close-up portrait of a professional male athlete" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDU4TVdZxsJsiVAMqSLjRR-kZ_lCSgkU6jvieCyL8cwGnbNQOk2UewxEQ__Y5B1QnwFZTzeJUIk2Ttt-pzK8LRnjcYLSxiDoNcYgMQdlbVdvYRx7EdjGHyO1bUnScuqXG3kwO1MTXs7cpZ37SlP0Tr1fnDTXK3iNITM4NDFHDQfusNlVUHzdjTSQQTVdZ9Pn52MkpZupHOFkq6YmrMv6LakFYD8F6NBD4q1T64K_TYNt-n3N5FXdUiJ-SohFtfwlx3cYyTSpd5Ho4xo");'></div>
+<div class="flex flex-col items-center justify-center">
+<p class="text-white text-[22px] font-bold leading-tight tracking-[-0.015em] text-center">Marcus Sterling</p>
+<p class="text-white/60 text-base font-normal leading-normal text-center mb-4">Joined: Jan 2024</p>
+<div class="flex flex-col gap-2 items-center bg-white/5 py-3 px-6 rounded-2xl border border-white/5 w-full max-w-[280px]">
+<div class="flex items-center gap-2">
+<span class="text-white/40 text-sm font-medium">Phone:</span>
+<span class="text-white text-sm font-semibold tracking-wide">+1 (555) 012-3456</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-white/40 text-sm font-medium">Email:</span>
+<span class="text-white text-sm font-semibold tracking-wide">marcus.s@example.com</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<h3 class="text-white text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-6">Membership Validity</h3>
+<div class="flex flex-col gap-3 p-4 mx-4 mb-4 rounded-xl bg-white/5 border border-white/10">
+<div class="flex gap-6 justify-between items-end">
+<div class="flex flex-col gap-1">
+<p class="text-primary text-2xl font-bold leading-none">12 days left</p>
+<p class="text-white/60 text-sm font-normal">Expires on Oct 24, 2024</p>
+</div>
+<p class="text-white/40 text-sm font-normal leading-normal">Plan: Gold Annual</p>
+</div>
+<div class="h-3 w-full rounded-full bg-white/10 overflow-hidden">
+<div class="h-full rounded-full bg-primary" style="width: 80%;"></div>
+</div>
+</div>
+<h3 class="text-white text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-2">Payment Status</h3>
+<div class="p-4 pt-0">
+<div class="flex items-stretch justify-between gap-4 rounded-xl bg-white/5 p-4 border border-white/10">
+<div class="flex flex-[2_2_0px] flex-col gap-4">
+<div class="flex flex-col gap-1">
+<p class="text-white/60 text-sm font-normal">Status</p>
+<p class="text-primary text-xl font-bold leading-tight uppercase tracking-wider">Payment Pending</p>
+<p class="text-white text-lg font-medium">Balance: $45.00</p>
+</div>
+<button class="flex min-w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-4 bg-primary text-background-dark gap-2 text-sm font-bold leading-normal">
+<span class="material-symbols-outlined text-[18px]">notifications_active</span>
+<span class="truncate">Send Payment Reminder</span>
+</button>
+</div>
+<div class="hidden sm:block w-32 bg-center bg-no-repeat aspect-square bg-cover rounded-lg" data-alt="Abstract yellow and black geometric pattern" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCKckcqkF0xgLQ3Yg9LZYeYX3TqVjX07ymJmtqK4ttNf36vvTecd3zy7RfmWZzEre1yHkjoVCKGJvcwVE9F5-hlJfbVcJkuTxAgS0rwUpEKAppjg0uQrDNcHEhDLDYCRfyUjAJe7grsH73-bjTLd18jxGg7se2B6rlR9Tn_XXNu2wpaVoBWeUHazCJupgTXkrvng45Er5JE5Mp8I-PRD0ZG9upoqUk2ybrTnPlH7thDvMJpBDOcrGmLXz-uwjdSrDRMLRx6kmeDLkLU");'></div>
+</div>
+</div>
+<div class="flex items-center justify-between px-4 pt-4">
+<h3 class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">Attendance History</h3>
+<span class="text-primary text-sm font-medium">October 2024</span>
+</div>
+<div class="p-4">
+<div class="bg-white/5 rounded-xl border border-white/10 p-4">
+<div class="grid grid-cols-7 gap-1 text-center mb-2">
+<span class="text-white/40 text-[10px] uppercase font-bold">M</span>
+<span class="text-white/40 text-[10px] uppercase font-bold">T</span>
+<span class="text-white/40 text-[10px] uppercase font-bold">W</span>
+<span class="text-white/40 text-[10px] uppercase font-bold">T</span>
+<span class="text-white/40 text-[10px] uppercase font-bold">F</span>
+<span class="text-white/40 text-[10px] uppercase font-bold">S</span>
+<span class="text-white/40 text-[10px] uppercase font-bold">S</span>
+</div>
+<div class="grid grid-cols-7 gap-2">
+<div class="aspect-square flex flex-col items-center justify-center text-xs text-white/40">26</div>
+<div class="aspect-square flex flex-col items-center justify-center text-xs text-white/40">27</div>
+<div class="aspect-square flex flex-col items-center justify-center text-xs text-white/40">28</div>
+<div class="aspect-square flex flex-col items-center justify-center text-xs text-white/40">29</div>
+<div class="aspect-square flex flex-col items-center justify-center text-xs text-white/40">30</div>
+<div class="aspect-square flex flex-col items-center justify-center text-xs text-white">1</div>
+<div class="aspect-square flex flex-col items-center justify-center text-xs text-white relative">2
+                        <div class="absolute bottom-1 size-1 bg-primary rounded-full"></div>
+</div>
+<div class="aspect-square flex flex-col items-center justify-center text-xs text-white relative">3
+                        <div class="absolute bottom-1 size-1 bg-primary rounded-full"></div>
+</div>
+<div class="aspect-square flex flex-col items-center justify-center text-xs text-white">4</div>
+<div class="aspect-square flex flex-col items-center justify-center text-xs text-white relative">5
+                        <div class="absolute bottom-1 size-1 bg-primary rounded-full"></div>
+</div>
+<div class="aspect-square flex flex-col items-center justify-center text-xs text-white">6</div>
+<div class="aspect-square flex flex-col items-center justify-center text-xs text-white relative">7
+                        <div class="absolute bottom-1 size-1 bg-primary rounded-full"></div>
+</div>
+<div class="aspect-square flex flex-col items-center justify-center text-xs text-white relative">8
+                        <div class="absolute bottom-1 size-1 bg-primary rounded-full"></div>
+</div>
+<div class="aspect-square flex flex-col items-center justify-center text-xs text-white">9</div>
+<div class="aspect-square flex flex-col items-center justify-center text-xs text-white relative">10
+                        <div class="absolute bottom-1 size-1 bg-primary rounded-full"></div>
+</div>
+<div class="aspect-square flex flex-col items-center justify-center text-xs text-white">11</div>
+<div class="aspect-square flex flex-col items-center justify-center text-xs text-white relative">12
+                        <div class="absolute bottom-1 size-1 bg-primary rounded-full"></div>
+</div>
+<div class="aspect-square flex flex-col items-center justify-center text-xs text-white border border-primary/50 rounded-lg">13</div>
+<div class="aspect-square flex flex-col items-center justify-center text-xs text-white/40">14</div>
+<div class="aspect-square flex flex-col items-center justify-center text-xs text-white/40">15</div>
+<div class="aspect-square flex flex-col items-center justify-center text-xs text-white/40">16</div>
+<div class="aspect-square flex flex-col items-center justify-center text-xs text-white/40">17</div>
+<div class="aspect-square flex flex-col items-center justify-center text-xs text-white/40">18</div>
+<div class="aspect-square flex flex-col items-center justify-center text-xs text-white/40">19</div>
+<div class="aspect-square flex flex-col items-center justify-center text-xs text-white/40">20</div>
+<div class="aspect-square flex flex-col items-center justify-center text-xs text-white/40">21</div>
+<div class="aspect-square flex flex-col items-center justify-center text-xs text-white/40">22</div>
+<div class="aspect-square flex flex-col items-center justify-center text-xs text-white/40">23</div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4 p-4 pt-0">
+<div class="bg-white/5 rounded-xl border border-white/10 p-4 flex flex-col items-center justify-center text-center">
+<span class="text-white/60 text-xs font-normal mb-1">Total Sessions</span>
+<span class="text-white text-3xl font-bold">42</span>
+</div>
+<div class="bg-white/5 rounded-xl border border-white/10 p-4 flex flex-col items-center justify-center text-center">
+<span class="text-white/60 text-xs font-normal mb-1">Avg per Week</span>
+<span class="text-white text-3xl font-bold">3.5</span>
+</div>
+</div>
+<div class="h-12 bg-background-light dark:bg-background-dark"></div>
+</div>
+
+</body></html>

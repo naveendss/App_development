@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Openkora - Complete Your Profile</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f9f506",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#000000",
+                        "field-dark": "#1A1A1A",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Lexend', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        /* Custom styles for the date picker appearance in dark mode */
+        input[type="date"]::-webkit-calendar-picker-indicator {
+            filter: invert(1);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white min-h-screen flex flex-col">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-10 bg-background-light dark:bg-background-dark/95 backdrop-blur-md">
+<div class="flex items-center p-4 justify-between max-w-md mx-auto w-full">
+<div class="flex size-10 items-center justify-center rounded-full hover:bg-zinc-200 dark:hover:bg-zinc-800 transition-colors">
+<span class="material-symbols-outlined">arrow_back_ios_new</span>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-tight flex-1 text-center pr-10">Complete Your Profile</h2>
+</div>
+</header>
+<main class="flex-1 flex flex-col max-w-md mx-auto w-full px-4">
+<!-- Progress Bar Component -->
+<div class="flex flex-col gap-3 py-4">
+<div class="flex gap-6 justify-between">
+<p class="text-zinc-500 dark:text-zinc-400 text-sm font-medium leading-normal uppercase tracking-wider">Step 2 of 4</p>
+<p class="text-primary text-sm font-bold">50%</p>
+</div>
+<div class="rounded-full bg-zinc-200 dark:bg-zinc-800 h-1.5 overflow-hidden">
+<div class="h-full rounded-full bg-primary" style="width: 50%;"></div>
+</div>
+</div>
+<!-- Headline & Body Text -->
+<div class="pt-4 pb-6">
+<h3 class="text-2xl font-bold leading-tight mb-2">Build your athlete profile</h3>
+<p class="text-zinc-600 dark:text-zinc-400 text-base font-normal">This helps us tailor your Openkora gym recommendations and fitness plans.</p>
+</div>
+<!-- Profile Form -->
+<form class="flex flex-col gap-6">
+<!-- Full Name Field -->
+<div class="flex flex-col gap-2">
+<label class="text-sm font-semibold text-zinc-700 dark:text-zinc-300 ml-1">Full Name</label>
+<input class="w-full bg-zinc-100 dark:bg-field-dark border-zinc-200 dark:border-zinc-800 focus:border-primary focus:ring-1 focus:ring-primary rounded-xl h-14 px-4 text-base transition-all placeholder:text-zinc-400" placeholder="Enter your full name" type="text"/>
+</div>
+<!-- Date of Birth Field -->
+<div class="flex flex-col gap-2">
+<label class="text-sm font-semibold text-zinc-700 dark:text-zinc-300 ml-1">Date of Birth</label>
+<div class="relative">
+<input class="w-full bg-zinc-100 dark:bg-field-dark border-zinc-200 dark:border-zinc-800 focus:border-primary focus:ring-1 focus:ring-primary rounded-xl h-14 px-4 text-base transition-all text-zinc-900 dark:text-white" type="date"/>
+</div>
+</div>
+<!-- Gender Selection (Custom Styled Select) -->
+<div class="flex flex-col gap-2">
+<label class="text-sm font-semibold text-zinc-700 dark:text-zinc-300 ml-1">Gender</label>
+<div class="relative">
+<select class="appearance-none w-full bg-zinc-100 dark:bg-field-dark border-zinc-200 dark:border-zinc-800 focus:border-primary focus:ring-1 focus:ring-primary rounded-xl h-14 px-4 pr-10 text-base transition-all text-zinc-900 dark:text-white">
+<option disabled="" selected="" value="">Select Gender</option>
+<option value="male">Male</option>
+<option value="female">Female</option>
+<option value="non-binary">Non-binary</option>
+<option value="prefer-not-to-say">Prefer not to say</option>
+</select>
+<div class="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-zinc-400">
+<span class="material-symbols-outlined">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Fitness Goal Selection -->
+<div class="flex flex-col gap-2">
+<label class="text-sm font-semibold text-zinc-700 dark:text-zinc-300 ml-1">Fitness Goal</label>
+<div class="relative">
+<select class="appearance-none w-full bg-zinc-100 dark:bg-field-dark border-zinc-200 dark:border-zinc-800 focus:border-primary focus:ring-1 focus:ring-primary rounded-xl h-14 px-4 pr-10 text-base transition-all text-zinc-900 dark:text-white">
+<option disabled="" selected="" value="">Select primary goal</option>
+<option value="weight-loss">Weight Loss</option>
+<option value="muscle-gain">Muscle Gain</option>
+<option value="endurance">Endurance</option>
+<option value="general-fitness">General Fitness</option>
+</select>
+<div class="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-zinc-400">
+<span class="material-symbols-outlined">fitness_center</span>
+</div>
+</div>
+</div>
+<!-- Spacing for bottom button -->
+<div class="h-10"></div>
+</form>
+</main>
+<!-- Fixed Bottom CTA -->
+<footer class="sticky bottom-0 bg-background-light dark:bg-background-dark p-4 border-t border-zinc-200 dark:border-zinc-900">
+<div class="max-w-md mx-auto">
+<button class="w-full bg-primary text-black font-bold py-4 rounded-xl flex items-center justify-center gap-2 hover:opacity-90 active:scale-[0.98] transition-all">
+                Continue
+                <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+<p class="text-center text-[10px] text-zinc-500 mt-4 px-6">
+                By clicking continue, you agree to our Terms of Service and Privacy Policy.
+            </p>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,52 @@
+name: openkora_vendor
+description: Openkora Vendor App - Gym Management Platform
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  
+  # State Management
+  flutter_riverpod: ^2.4.0
+  
+  # Navigation
+  go_router: ^12.0.0
+  
+  # UI
+  google_fonts: ^6.1.0
+  
+  # QR Code
+  qr_code_scanner: ^1.0.1
+  qr_flutter: ^4.1.0
+  
+  # Image Picker
+  image_picker: ^1.0.4
+  
+  # HTTP & API
+  http: ^1.1.0
+  dio: ^5.3.3
+  
+  # Local Storage
+  shared_preferences: ^2.2.2
+  flutter_secure_storage: ^9.0.0
+  
+  # Utils
+  intl: ^0.18.1
+  
+  cupertino_icons: ^1.0.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+  
+  assets:
+    - assets/icons/
+    - assets/images/

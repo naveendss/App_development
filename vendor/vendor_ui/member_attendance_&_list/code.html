@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Member Attendance &amp; List</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f9f506",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#000000",
+                        "surface-dark": "#121212",
+                        "input-dark": "#1c1c1c",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Lexend', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-black dark:text-white min-h-screen">
+<div class="max-w-[480px] mx-auto min-h-screen flex flex-col relative pb-20">
+<!-- Header -->
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md px-4 pt-6 pb-2">
+<div class="flex items-center justify-between mb-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-2xl">arrow_back_ios</span>
+<h1 class="text-2xl font-bold tracking-tight">Members</h1>
+</div>
+<div class="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-semibold">
+                    124 TOTAL
+                </div>
+</div>
+<!-- Search Bar -->
+<div class="relative group">
+<label class="flex flex-col min-w-40 h-12 w-full">
+<div class="flex w-full flex-1 items-stretch rounded-xl h-full overflow-hidden transition-all focus-within:ring-2 focus-within:ring-primary/50">
+<div class="text-[#bbba9b] flex border-none bg-zinc-100 dark:bg-input-dark items-center justify-center pl-4">
+<span class="material-symbols-outlined text-[24px]">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 border-none bg-zinc-100 dark:bg-input-dark text-black dark:text-white placeholder:text-zinc-500 dark:placeholder:text-[#bbba9b] px-3 text-base font-normal leading-normal focus:ring-0" placeholder="Search by name or ID" value=""/>
+<div class="bg-zinc-100 dark:bg-input-dark flex items-center pr-4">
+<span class="material-symbols-outlined text-[20px] text-zinc-400">tune</span>
+</div>
+</div>
+</label>
+</div>
+<!-- Filter Chips -->
+<div class="flex gap-2 py-4 overflow-x-auto custom-scrollbar">
+<div class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-xl bg-primary px-5 shadow-lg shadow-primary/20">
+<p class="text-black text-sm font-semibold">All</p>
+</div>
+<div class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-xl bg-zinc-100 dark:bg-input-dark px-5">
+<p class="text-zinc-600 dark:text-zinc-300 text-sm font-medium">Present</p>
+</div>
+<div class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-xl bg-zinc-100 dark:bg-input-dark px-5">
+<p class="text-zinc-600 dark:text-zinc-300 text-sm font-medium">Pending</p>
+</div>
+<div class="flex h-9 shrink-0 items-center justify-center gap-x-2 rounded-xl bg-zinc-100 dark:bg-input-dark px-5">
+<p class="text-zinc-600 dark:text-zinc-300 text-sm font-medium">Overdue</p>
+</div>
+</div>
+</header>
+<!-- Members List -->
+<main class="flex-1 px-4 space-y-3">
+<!-- Member Card 1 -->
+<div class="bg-white dark:bg-surface-dark p-3 rounded-2xl flex items-center justify-between border border-zinc-100 dark:border-zinc-800/50 shadow-sm">
+<div class="flex items-center gap-4">
+<div class="relative">
+<div class="h-14 w-14 rounded-xl bg-center bg-cover border-2 border-zinc-100 dark:border-zinc-800" data-alt="Profile portrait of Sarah Jenkins" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD4o4Of3uCaNo4VFSO4x-HW6r5TPqsQVNSxX5NCP8dbJKB0WUSWN3n0GpDn1gr9qRicN_ADA1jBFM9hMnlUqw02FQ1YbQw62BVt-HgZUTjJSs4BkMSd4ckb8UHUH7H5a37cg2USK5pI3WWgPeCDPiv_efbcPVeYz-3T-ixu7njKX0rU_jRewDBa-CprBpQ4sBjyM5hGv5_pNMkexmXPj8gK8hUY9fdcpKLaP8DAvj1oPRKNNB0ERB6KXQk6vUX2lKFTBhaN9IWdqhZu')"></div>
+<div class="absolute -top-1 -right-1 h-3 w-3 rounded-full bg-green-500 border-2 border-white dark:border-surface-dark"></div>
+</div>
+<div>
+<h3 class="font-semibold text-base">Sarah Jenkins</h3>
+<p class="text-xs text-zinc-500 dark:text-zinc-400">Monthly Pass • #OK-8942</p>
+<div class="flex items-center gap-1.5 mt-1">
+<span class="inline-block h-1.5 w-1.5 rounded-full bg-green-500"></span>
+<span class="text-[10px] font-bold uppercase tracking-wider text-green-500">Paid</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col items-end gap-1">
+<span class="text-[10px] font-bold text-zinc-400 uppercase">Check-in</span>
+<label class="relative flex h-[32px] w-[56px] cursor-pointer items-center rounded-full border-none bg-zinc-200 dark:bg-zinc-800 p-1 transition-all has-[:checked]:bg-primary">
+<input checked="" class="invisible absolute peer" type="checkbox"/>
+<div class="h-6 w-6 rounded-full bg-white shadow-md transform transition-transform peer-checked:translate-x-6"></div>
+</label>
+</div>
+</div>
+<!-- Member Card 2 -->
+<div class="bg-white dark:bg-surface-dark p-3 rounded-2xl flex items-center justify-between border border-zinc-100 dark:border-zinc-800/50 shadow-sm">
+<div class="flex items-center gap-4">
+<div class="relative">
+<div class="h-14 w-14 rounded-xl bg-center bg-cover border-2 border-zinc-100 dark:border-zinc-800" data-alt="Profile portrait of Alex Thompson" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCSYh0jlUIyhvZNYZYMkHmWCtEuIs3dBB_LQfn5yXC2RYcSKBvp3HDhNgA4mebZT5SjclD2Hdt7PeHw6Q9UgcFrwcsY7pNW12awsaQ1NHLeMsttPpAuE_LuXCPdCXMhXWNQImFzSlRHxgxh1pPd9qoTpYNaW5hzxrrjoLwtj-OnMgMHRmZmlEASh-iqLZjJfLUWsqExmnIBanideSSlMUQZBGzOzrntn9l91hNhV6j0OEn8HRFc4K1uG-ei6-SYIH0mBPWkW37tj6sZ')"></div>
+</div>
+<div>
+<h3 class="font-semibold text-base">Alex Thompson</h3>
+<p class="text-xs text-zinc-500 dark:text-zinc-400">Monthly Pass • #OK-8821</p>
+<div class="flex items-center gap-1.5 mt-1">
+<span class="inline-block h-1.5 w-1.5 rounded-full bg-primary"></span>
+<span class="text-[10px] font-bold uppercase tracking-wider text-primary">Pending</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col items-end gap-1">
+<span class="text-[10px] font-bold text-zinc-400 uppercase">Check-in</span>
+<label class="relative flex h-[32px] w-[56px] cursor-pointer items-center rounded-full border-none bg-zinc-200 dark:bg-zinc-800 p-1 transition-all has-[:checked]:bg-primary">
+<input class="invisible absolute peer" type="checkbox"/>
+<div class="h-6 w-6 rounded-full bg-white shadow-md transform transition-transform peer-checked:translate-x-6"></div>
+</label>
+</div>
+</div>
+<!-- Member Card 3 -->
+<div class="bg-white dark:bg-surface-dark p-3 rounded-2xl flex items-center justify-between border border-zinc-100 dark:border-zinc-800/50 shadow-sm">
+<div class="flex items-center gap-4">
+<div class="relative">
+<div class="h-14 w-14 rounded-xl bg-center bg-cover border-2 border-zinc-100 dark:border-zinc-800" data-alt="Profile portrait of Marcus Miller" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD4dCjzmbUVWjeTnz-NhY8DsDPudwsCWTthQu1HPzUzibRiW5vg4p2JNEqxW9oOYxAioPNQa3-cXQ9dQhrWUZG6bifz-PYK7cbzNDMIkaJnUlwlnU1HhxBdqCaTkJPHiLBFwEAuYxcsUjLUdzlxSnX8oKH2RlKriiMzGdwee490E-UiyPaCSvpe6VRPcWQCV33PrHDjx7C0wiDzMTmycy3DLpXzCAxAlBTABEtm5_lt8jZ7a83Pk5sjrDKNogxiS-K7VqDXb8f2yF_Z')"></div>
+</div>
+<div>
+<h3 class="font-semibold text-base">Marcus Miller</h3>
+<p class="text-xs text-zinc-500 dark:text-zinc-400">Weekly Pass • #OK-9012</p>
+<div class="flex items-center gap-1.5 mt-1">
+<span class="inline-block h-1.5 w-1.5 rounded-full bg-green-500"></span>
+<span class="text-[10px] font-bold uppercase tracking-wider text-green-500">Paid</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col items-end gap-1">
+<span class="text-[10px] font-bold text-zinc-400 uppercase">Check-in</span>
+<label class="relative flex h-[32px] w-[56px] cursor-pointer items-center rounded-full border-none bg-zinc-200 dark:bg-zinc-800 p-1 transition-all has-[:checked]:bg-primary">
+<input class="invisible absolute peer" type="checkbox"/>
+<div class="h-6 w-6 rounded-full bg-white shadow-md transform transition-transform peer-checked:translate-x-6"></div>
+</label>
+</div>
+</div>
+<!-- Member Card 4 -->
+<div class="bg-white dark:bg-surface-dark p-3 rounded-2xl flex items-center justify-between border border-zinc-100 dark:border-zinc-800/50 shadow-sm">
+<div class="flex items-center gap-4">
+<div class="relative">
+<div class="h-14 w-14 rounded-xl bg-center bg-cover border-2 border-zinc-100 dark:border-zinc-800" data-alt="Profile portrait of Elena Rodriguez" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDvwJQJoQx45_ZhTBhG0SbsJm38Nuk1RZiSqJx0qJUU7o1XXSm_pcfU3p6QH0vVXIQL2tIPVnHDgPH9gStxZdFe0K5vqxwTYkxZD2bpFfDmXjXHo9sK4Z6zZ8i-_YnEwHQYlprkH9nAFHb1h7hygJVqUJ3SY5n0DMYtzz4jxDaFzlM0YT_Db1jQKiTYrQQvnRHflctFh4atWUNNpTU9PcT8p7AaKITXwP6TOLBiCjjwq_iGLoCJgOR021hYnIAWieN0FunzOuArNycp')"></div>
+</div>
+<div>
+<h3 class="font-semibold text-base">Elena Rodriguez</h3>
+<p class="text-xs text-zinc-500 dark:text-zinc-400">Annual Pass • #OK-7721</p>
+<div class="flex items-center gap-1.5 mt-1">
+<span class="inline-block h-1.5 w-1.5 rounded-full bg-green-500"></span>
+<span class="text-[10px] font-bold uppercase tracking-wider text-green-500">Paid</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col items-end gap-1">
+<span class="text-[10px] font-bold text-zinc-400 uppercase">Check-in</span>
+<label class="relative flex h-[32px] w-[56px] cursor-pointer items-center rounded-full border-none bg-zinc-200 dark:bg-zinc-800 p-1 transition-all has-[:checked]:bg-primary">
+<input checked="" class="invisible absolute peer" type="checkbox"/>
+<div class="h-6 w-6 rounded-full bg-white shadow-md transform transition-transform peer-checked:translate-x-6"></div>
+</label>
+</div>
+</div>
+<!-- Member Card 5 -->
+<div class="bg-white dark:bg-surface-dark p-3 rounded-2xl flex items-center justify-between border border-zinc-100 dark:border-zinc-800/50 shadow-sm">
+<div class="flex items-center gap-4">
+<div class="relative">
+<div class="h-14 w-14 rounded-xl bg-center bg-cover border-2 border-zinc-100 dark:border-zinc-800" data-alt="Profile portrait of David Chen" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBdoUJ11dLJtXSmahxVh2-fxheZyw0sP7HOqKedRR5AYzjq7kDQpjkd9dDIjff8wUlHVP4TNDc-0ucRS-x4XcYvgtfYQZMv0y03FJ1pxLs0hrsbvF3R4FJ6PTXAUIvgtS1Y5b8OgIBfibqo4Sonm2pIhLJ1-uOJsu7Ii9S3d3ex8pZJp2DC97iy3VgWQtOCM6X0YkMpzHUoUw9GgXPB8C6HeccHLU-9abfJxUn-EhZCiO148boQBioG3T14gSbo5zWIoG61QjzmWsLR')"></div>
+</div>
+<div>
+<h3 class="font-semibold text-base">David Chen</h3>
+<p class="text-xs text-zinc-500 dark:text-zinc-400">Monthly Pass • #OK-8199</p>
+<div class="flex items-center gap-1.5 mt-1">
+<span class="inline-block h-1.5 w-1.5 rounded-full bg-red-500"></span>
+<span class="text-[10px] font-bold uppercase tracking-wider text-red-500">Expired</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col items-end gap-1 opacity-50 pointer-events-none">
+<span class="text-[10px] font-bold text-zinc-400 uppercase">Blocked</span>
+<label class="relative flex h-[32px] w-[56px] items-center rounded-full border-none bg-zinc-300 dark:bg-zinc-900 p-1">
+<div class="h-6 w-6 rounded-full bg-zinc-400 dark:bg-zinc-700 shadow-md"></div>
+</label>
+</div>
+</div>
+</main>
+<!-- Fixed Bottom Navigation (iOS Style) -->
+<nav class="fixed bottom-0 left-0 right-0 max-w-[480px] mx-auto bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-xl border-t border-zinc-200 dark:border-zinc-800 px-6 py-3 flex justify-between items-center z-[100]">
+<button class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-[28px] variation-fill">group</span>
+<span class="text-[10px] font-medium">Members</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-zinc-400">
+<span class="material-symbols-outlined text-[28px]">calendar_today</span>
+<span class="text-[10px] font-medium">Schedule</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-zinc-400">
+<div class="h-10 w-10 bg-primary rounded-full flex items-center justify-center -mt-8 shadow-lg shadow-primary/30 border-4 border-background-light dark:border-background-dark">
+<span class="material-symbols-outlined text-black font-bold">add</span>
+</div>
+<span class="text-[10px] font-medium">New</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-zinc-400">
+<span class="material-symbols-outlined text-[28px]">insights</span>
+<span class="text-[10px] font-medium">Stats</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-zinc-400">
+<span class="material-symbols-outlined text-[28px]">settings</span>
+<span class="text-[10px] font-medium">Settings</span>
+</button>
+</nav>
+</div>
+</body></html>

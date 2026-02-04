@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Openkora - Physical Details Setup</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f9f506",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#000000", // Pure black as requested
+                        "card-dark": "#121212",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Lexend', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .ios-status-bar {
+            height: 44px;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-dark text-white antialiased font-display">
+<div class="relative flex min-h-screen w-full flex-col max-w-[430px] mx-auto overflow-x-hidden pb-10">
+<!-- iOS Status Bar Spacer -->
+<div class="ios-status-bar w-full"></div>
+<!-- Top Navigation -->
+<div class="flex items-center px-4 py-2 justify-between">
+<button class="text-white flex size-10 items-center justify-center hover:bg-white/10 rounded-full transition-colors">
+<span class="material-symbols-outlined text-[24px]">arrow_back_ios_new</span>
+</button>
+<h2 class="text-white text-lg font-semibold leading-tight flex-1 text-center pr-10">Physical Details</h2>
+</div>
+<!-- Progress Indicator -->
+<div class="flex flex-col gap-2 p-4 mt-2">
+<div class="flex justify-between items-center mb-1">
+<p class="text-white/60 text-xs font-medium uppercase tracking-wider">Step 4 of 5</p>
+<p class="text-primary text-xs font-medium">80% Complete</p>
+</div>
+<div class="rounded-full bg-white/10 h-1.5 w-full overflow-hidden">
+<div class="h-full rounded-full bg-primary" style="width: 80%;"></div>
+</div>
+</div>
+<!-- Headline -->
+<div class="px-4 pt-6 pb-2">
+<h1 class="text-white tracking-tight text-[32px] font-bold leading-tight">Your Stats</h1>
+<p class="text-white/60 text-base font-normal leading-relaxed mt-2">
+                Help us customize your workout and equipment recommendations for your body type.
+            </p>
+</div>
+<!-- Height & Weight Inputs -->
+<div class="flex gap-4 px-4 py-6">
+<label class="flex flex-col flex-1">
+<p class="text-white/80 text-sm font-medium pb-2 ml-1">Weight (kg)</p>
+<input class="form-input flex w-full rounded-xl text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-white/10 bg-card-dark focus:border-primary h-14 placeholder:text-white/20 p-4 text-lg font-medium transition-all" placeholder="70" type="number"/>
+</label>
+<label class="flex flex-col flex-1">
+<p class="text-white/80 text-sm font-medium pb-2 ml-1">Height (cm)</p>
+<input class="form-input flex w-full rounded-xl text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-white/10 bg-card-dark focus:border-primary h-14 placeholder:text-white/20 p-4 text-lg font-medium transition-all" placeholder="175" type="number"/>
+</label>
+</div>
+<!-- Fitness Level Selection -->
+<div class="px-4 py-2">
+<p class="text-white/80 text-sm font-medium pb-4 ml-1">Fitness Level</p>
+<div class="flex flex-col gap-3">
+<!-- Option: Beginner -->
+<div class="relative group cursor-pointer">
+<input class="peer hidden" id="beginner" name="fitness_level" type="radio"/>
+<label class="flex items-center justify-between p-4 rounded-xl border-2 border-white/5 bg-card-dark peer-checked:border-primary peer-checked:bg-primary/5 transition-all duration-200" for="beginner">
+<div class="flex flex-col">
+<span class="text-white font-semibold text-base">Beginner</span>
+<span class="text-white/50 text-xs mt-0.5">I am new to the gym or consistent training</span>
+</div>
+<div class="flex items-center justify-center size-6 rounded-full border border-white/20 peer-checked:border-primary peer-checked:bg-primary">
+<span class="material-symbols-outlined text-[18px] text-background-dark opacity-0 peer-checked:opacity-100 font-bold transition-opacity" style="display: none;">check</span>
+</div>
+</label>
+</div>
+<!-- Option: Intermediate (Selected by default for demo) -->
+<div class="relative group cursor-pointer">
+<input checked="" class="peer hidden" id="intermediate" name="fitness_level" type="radio"/>
+<label class="flex items-center justify-between p-4 rounded-xl border-2 border-primary bg-primary/5 transition-all duration-200" for="intermediate">
+<div class="flex flex-col">
+<span class="text-white font-semibold text-base">Intermediate</span>
+<span class="text-white/50 text-xs mt-0.5">I have been training consistently for 6+ months</span>
+</div>
+<div class="flex items-center justify-center size-6 rounded-full bg-primary">
+<span class="material-symbols-outlined text-[18px] text-background-dark font-bold">check</span>
+</div>
+</label>
+</div>
+<!-- Option: Advanced -->
+<div class="relative group cursor-pointer">
+<input class="peer hidden" id="advanced" name="fitness_level" type="radio"/>
+<label class="flex items-center justify-between p-4 rounded-xl border-2 border-white/5 bg-card-dark peer-checked:border-primary peer-checked:bg-primary/5 transition-all duration-200" for="advanced">
+<div class="flex flex-col">
+<span class="text-white font-semibold text-base">Advanced</span>
+<span class="text-white/50 text-xs mt-0.5">I am an elite athlete or professional trainer</span>
+</div>
+<div class="flex items-center justify-center size-6 rounded-full border border-white/20">
+<!-- Visual placeholder for unselected state icon -->
+</div>
+</label>
+</div>
+</div>
+</div>
+<!-- Spacer for push -->
+<div class="flex-grow min-h-[40px]"></div>
+<!-- Action Button -->
+<div class="px-4 pt-4 pb-8">
+<button class="w-full bg-primary hover:bg-primary/90 active:scale-[0.98] text-background-dark text-lg font-bold py-4 rounded-xl transition-all shadow-lg shadow-primary/10">
+                Finish Setup
+            </button>
+<p class="text-center text-white/30 text-[10px] mt-4 uppercase tracking-[2px]">Powered by Openkora AI</p>
+</div>
+<!-- iOS Home Indicator Spacer -->
+<div class="h-5 w-full"></div>
+</div>
+<!-- Hidden radio helper style to show checkmarks only when peer is checked -->
+<style>
+        input[type="radio"]:checked + label div span.material-symbols-outlined {
+            display: block !important;
+        }
+        input[type="radio"]:checked + label div:last-child {
+            background-color: #f9f506 !important;
+            border-color: #f9f506 !important;
+        }
+    </style>
+</body></html>

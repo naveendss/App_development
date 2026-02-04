@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f9f506",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#121212",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Lexend', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-white font-display">
+<div class="flex flex-col min-h-screen max-w-md mx-auto relative pb-32">
+<!-- Top App Bar -->
+<div class="sticky top-0 z-50 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-md px-4 py-4 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-white">chevron_left</span>
+<h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">Photos &amp; Verification</h2>
+</div>
+<div class="text-xs font-bold text-primary px-3 py-1 bg-primary/10 rounded-full border border-primary/20">
+                STEP 4 OF 4
+            </div>
+</div>
+<!-- Page Indicators -->
+<div class="flex w-full flex-row items-center justify-center gap-3 py-4">
+<div class="h-1.5 w-1.5 rounded-full bg-primary"></div>
+<div class="h-1.5 w-1.5 rounded-full bg-primary"></div>
+<div class="h-1.5 w-1.5 rounded-full bg-primary"></div>
+<div class="h-1.5 w-6 rounded-full bg-primary shadow-[0_0_10px_rgba(249,245,6,0.3)]"></div>
+</div>
+<!-- Headline & Description -->
+<div class="px-4">
+<h3 class="text-white tracking-light text-2xl font-bold leading-tight pb-2 pt-2">Finish your profile</h3>
+<p class="text-white/60 text-base font-normal leading-normal pb-6">Showcase your gym with high-quality images and confirm your operating schedule for potential members.</p>
+</div>
+<!-- Upload Section -->
+<div class="px-4 mb-8">
+<div class="flex flex-col items-center gap-6 rounded-xl border-2 border-dashed border-primary/30 bg-primary/5 px-6 py-12">
+<div class="bg-primary/20 p-4 rounded-full">
+<span class="material-symbols-outlined text-primary text-3xl">add_a_photo</span>
+</div>
+<div class="flex max-w-[480px] flex-col items-center gap-2">
+<p class="text-white text-lg font-bold leading-tight tracking-[-0.015em] text-center">Upload Gym Photos</p>
+<p class="text-white/60 text-sm font-normal leading-normal text-center">Add at least 3 high-quality photos showing your equipment and space.</p>
+</div>
+<button class="flex min-w-[140px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 px-6 bg-primary text-black text-sm font-bold leading-normal tracking-wide transition-transform active:scale-95">
+<span class="truncate">Add Images</span>
+</button>
+</div>
+</div>
+<!-- Operational Hours Section -->
+<div class="px-4 mb-10">
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-primary text-xl">schedule</span>
+<h4 class="text-white text-lg font-bold">Operational Hours</h4>
+</div>
+<div class="space-y-4">
+<!-- Weekdays -->
+<div class="bg-white/5 border border-white/10 rounded-xl p-4">
+<p class="text-white text-sm font-bold mb-3">Weekdays (Mon - Fri)</p>
+<div class="flex items-center gap-4">
+<div class="flex-1 flex flex-col gap-1">
+<label class="text-[10px] text-white/40 uppercase font-bold tracking-wider">Open</label>
+<div class="bg-white/5 border border-white/10 rounded-lg px-3 py-2 text-sm text-white flex justify-between items-center">
+                                06:00 AM
+                                <span class="material-symbols-outlined text-white/30 text-xs">expand_more</span>
+</div>
+</div>
+<div class="h-[20px] w-px bg-white/10 mt-4"></div>
+<div class="flex-1 flex flex-col gap-1">
+<label class="text-[10px] text-white/40 uppercase font-bold tracking-wider">Close</label>
+<div class="bg-white/5 border border-white/10 rounded-lg px-3 py-2 text-sm text-white flex justify-between items-center">
+                                10:00 PM
+                                <span class="material-symbols-outlined text-white/30 text-xs">expand_more</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Weekends -->
+<div class="bg-white/5 border border-white/10 rounded-xl p-4">
+<p class="text-white text-sm font-bold mb-3">Weekends (Sat - Sun)</p>
+<div class="flex items-center gap-4">
+<div class="flex-1 flex flex-col gap-1">
+<label class="text-[10px] text-white/40 uppercase font-bold tracking-wider">Open</label>
+<div class="bg-white/5 border border-white/10 rounded-lg px-3 py-2 text-sm text-white flex justify-between items-center">
+                                08:00 AM
+                                <span class="material-symbols-outlined text-white/30 text-xs">expand_more</span>
+</div>
+</div>
+<div class="h-[20px] w-px bg-white/10 mt-4"></div>
+<div class="flex-1 flex flex-col gap-1">
+<label class="text-[10px] text-white/40 uppercase font-bold tracking-wider">Close</label>
+<div class="bg-white/5 border border-white/10 rounded-lg px-3 py-2 text-sm text-white flex justify-between items-center">
+                                08:00 PM
+                                <span class="material-symbols-outlined text-white/30 text-xs">expand_more</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Verification Badge Section -->
+<div class="px-4 mb-12">
+<div class="flex gap-4 items-center bg-primary/5 rounded-xl p-4 border border-primary/20">
+<span class="material-symbols-outlined text-primary text-2xl">verified_user</span>
+<div>
+<p class="text-white text-sm font-bold">Identity Verification</p>
+<p class="text-white/60 text-xs">We'll review your details within 24 hours.</p>
+</div>
+</div>
+</div>
+<!-- Sticky Footer Action -->
+<div class="fixed bottom-0 left-0 right-0 p-4 bg-background-dark/80 backdrop-blur-xl border-t border-white/10 max-w-md mx-auto">
+<button class="w-full flex items-center justify-center gap-2 rounded-xl h-14 bg-primary text-black font-bold text-base tracking-wide shadow-[0_4px_20px_rgba(249,245,6,0.25)] transition-transform active:scale-95">
+                Submit for Approval
+                <span class="material-symbols-outlined font-bold">arrow_forward</span>
+</button>
+<div class="h-4"></div><!-- Spacer for iOS home indicator -->
+</div>
+</div>
+</body></html>
