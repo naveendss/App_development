@@ -17,13 +17,14 @@ app = FastAPI(
     openapi_url="/api/openapi.json"
 )
 
-# CORS middleware
+# CORS middleware - Allow all origins for development and mobile apps
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Update in production
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
+    expose_headers=["*"],
 )
 
 # Include API router

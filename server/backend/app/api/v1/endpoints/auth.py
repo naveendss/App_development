@@ -78,41 +78,50 @@ async def login(request: LoginRequest, db: Session = Depends(get_db)):
     """
     Login with email and password
     """
-    # Find user by email
-    user = db.query(User).filter(User.email == request.email).first()
-    
-    if not user:
-        raise HTTPException(
-            status_code=status.HTTP_401_UNAUTHORIZED,
-            detail="Invalid email or password"
+    try:
+        # Find user by email
+        user = db.query(User).filter(User.email == request.email).first()
+        
+        if not user:
+            raise HTTPException(
+                status_code=status.HTTP_401_UNAUTHORIZED,
+                detail="Invalid email or password"
+            )
+        
+        # Verify password
+        if not user.password_hash or not verify_password(request.password, user.password_hash):
+            raise HTTPException(
+                status_code=status.HTTP_401_UNAUTHORIZED,
+                detail="Invalid email or password"
+            )
+        
+        # Check user type if specified
+        if request.user_type and user.user_type != request.user_type:
+            raise HTTPException(
+                status_code=status.HTTP_403_FORBIDDEN,
+                detail=f"This account is not a {request.user_type} account"
+            )
+        
+        # Generate access token
+        access_token = create_access_token(
+            data={"sub": str(user.id), "user_type": user.user_type}
         )
-    
-    # Verify password
-    if not user.password_hash or not verify_password(request.password, user.password_hash):
-        raise HTTPException(
-            status_code=status.HTTP_401_UNAUTHORIZED,
-            detail="Invalid email or password"
+        
+        return LoginResponse(
+            access_token=access_token,
+            user_id=str(user.id),
+            user_type=user.user_type,
+            full_name=user.full_name,
+            profile_image_url=user.profile_image_url
         )
-    
-    # Check user type if specified
-    if request.user_type and user.user_type != request.user_type:
+    except HTTPException:
+        raise
+    except Exception as e:
+        print(f"Login error: {str(e)}")
         raise HTTPException(
-            status_code=status.HTTP_403_FORBIDDEN,
-            detail=f"This account is not a {request.user_type} account"
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=f"Login failed: {str(e)}"
         )
-    
-    # Generate access token
-    access_token = create_access_token(
-        data={"sub": str(user.id), "user_type": user.user_type}
-    )
-    
-    return LoginResponse(
-        access_token=access_token,
-        user_id=str(user.id),
-        user_type=user.user_type,
-        full_name=user.full_name,
-        profile_image_url=user.profile_image_url
-    )
 
 @router.post("/verify-token")
 async def verify_token(db: Session = Depends(get_db)):
