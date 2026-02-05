@@ -111,7 +111,7 @@ async def create_booking(
 
 @router.get("/my-bookings", response_model=List[BookingResponse])
 async def get_my_bookings(
-    status_filter: Optional[str] = Query(None, regex="^(upcoming|active|completed|cancelled)$"),
+    status_filter: Optional[str] = Query(None, pattern="^(upcoming|active|completed|cancelled)$"),
     current_user: User = Depends(get_current_customer),
     db: Session = Depends(get_db)
 ):
@@ -153,7 +153,7 @@ async def get_my_bookings(
 async def get_gym_bookings(
     gym_id: str,
     booking_date: Optional[date] = None,
-    status_filter: Optional[str] = Query(None, regex="^(upcoming|active|completed|cancelled)$"),
+    status_filter: Optional[str] = Query(None, pattern="^(upcoming|active|completed|cancelled)$"),
     current_user: User = Depends(get_current_vendor),
     db: Session = Depends(get_db)
 ):

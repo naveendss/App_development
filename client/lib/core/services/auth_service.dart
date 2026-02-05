@@ -3,7 +3,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../models/user_model.dart';
 
 class AuthService {
-  static const String baseUrl = 'http://localhost:8000/api/v1';
+  static const String baseUrl = 'https://app-development-il62.onrender.com/api/v1';
   // For Android emulator use: 'http://10.0.2.2:8000/api/v1'
   // For iOS simulator use: 'http://localhost:8000/api/v1'
   // For physical device use: 'http://YOUR_IP:8000/api/v1'

@@ -3,7 +3,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../models/booking_model.dart';
 
 class BookingService {
-  static const String baseUrl = 'http://localhost:8000/api/v1';
+  static const String baseUrl = 'https://app-development-il62.onrender.com/api/v1';
   
   final Dio _dio = Dio(
     BaseOptions(

@@ -2,7 +2,7 @@ import 'package:dio/dio.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class MembershipService {
-  static const String baseUrl = 'http://localhost:8000/api/v1';
+  static const String baseUrl = 'https://app-development-il62.onrender.com/api/v1';
   
   final Dio _dio = Dio(
     BaseOptions(

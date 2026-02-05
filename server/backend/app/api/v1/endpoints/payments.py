@@ -68,7 +68,7 @@ async def create_payment(
 
 @router.get("/my-payments", response_model=List[PaymentResponse])
 async def get_my_payments(
-    status_filter: Optional[str] = Query(None, regex="^(pending|paid|failed|refunded)$"),
+    status_filter: Optional[str] = Query(None, pattern="^(pending|paid|failed|refunded)$"),
     current_user: User = Depends(get_current_customer),
     db: Session = Depends(get_db)
 ):
