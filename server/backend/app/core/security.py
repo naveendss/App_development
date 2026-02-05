@@ -12,23 +12,23 @@ import hashlib
 # Password hashing with bcrypt
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
+def _prepare_password(password: str) -> str:
+    """Prepare password for bcrypt by ensuring it's under 72 bytes"""
+    password_bytes = password.encode('utf-8')
+    if len(password_bytes) > 72:
+        # Hash long passwords with SHA256 first to ensure they fit in 72 bytes
+        return hashlib.sha256(password_bytes).hexdigest()
+    return password
+
 def verify_password(plain_password: str, hashed_password: str) -> bool:
     """Verify a password against a hash"""
-    # Truncate password to 72 bytes for bcrypt compatibility
-    password_bytes = plain_password.encode('utf-8')
-    if len(password_bytes) > 72:
-        # Use first 72 bytes
-        plain_password = password_bytes[:72].decode('utf-8', errors='ignore')
-    return pwd_context.verify(plain_password, hashed_password)
+    prepared_password = _prepare_password(plain_password)
+    return pwd_context.verify(prepared_password, hashed_password)
 
 def get_password_hash(password: str) -> str:
     """Hash a password"""
-    # Truncate password to 72 bytes for bcrypt compatibility
-    password_bytes = password.encode('utf-8')
-    if len(password_bytes) > 72:
-        # Use first 72 bytes
-        password = password_bytes[:72].decode('utf-8', errors='ignore')
-    return pwd_context.hash(password)
+    prepared_password = _prepare_password(password)
+    return pwd_context.hash(prepared_password)
 
 def create_access_token(data: dict, expires_delta: Optional[timedelta] = None) -> str:
     """Create JWT access token"""
