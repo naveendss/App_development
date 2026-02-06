@@ -22,13 +22,27 @@ def _prepare_password(password: str) -> str:
 
 def verify_password(plain_password: str, hashed_password: str) -> bool:
     """Verify a password against a hash"""
-    prepared_password = _prepare_password(plain_password)
-    return pwd_context.verify(prepared_password, hashed_password)
+    try:
+        prepared_password = _prepare_password(plain_password)
+        return pwd_context.verify(prepared_password, hashed_password)
+    except Exception as e:
+        # If password is still too long, try with just first 72 chars
+        if "72 bytes" in str(e):
+            truncated = plain_password[:72]
+            return pwd_context.verify(truncated, hashed_password)
+        raise
 
 def get_password_hash(password: str) -> str:
     """Hash a password"""
-    prepared_password = _prepare_password(password)
-    return pwd_context.hash(prepared_password)
+    try:
+        prepared_password = _prepare_password(password)
+        return pwd_context.hash(prepared_password)
+    except Exception as e:
+        # If password is still too long, try with just first 72 chars
+        if "72 bytes" in str(e):
+            truncated = password[:72]
+            return pwd_context.hash(truncated)
+        raise
 
 def create_access_token(data: dict, expires_delta: Optional[timedelta] = None) -> str:
     """Create JWT access token"""
